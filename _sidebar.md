@@ -8,7 +8,7 @@
         * [Project Management](/docs/overview/dashboard/new_project.md)
         * [Tutorials](/docs/overview/dashboard/tutorials.md)
         * [Sharing and Publishing](/docs/overview/dashboard/share.md)
-    * [**_S4L_<sup>_lite_</sup>** Manual](/docs/overview/s4l_lite.md)
+    * [**Sim4Life** Manual](/docs/overview/sim4life.md)
 * [License Agreements](/docs/licensing/license.md)
     * [Sim4Life](/docs/licensing/copyright_Sim4Life.md)
 * [Release Notes](/docs/release/releases.md)
