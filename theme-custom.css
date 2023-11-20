@@ -1,0 +1,7 @@
+:root {
+    --base-font-size: 16px;
+    --base-font-family: Roboto, Helvetica;
+    --theme-color   : #0190d0;
+    --base-background-color: #202426;
+    --sidebar-background: #2e3437;
+}
