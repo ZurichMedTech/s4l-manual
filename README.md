@@ -1,12 +1,12 @@
 # Welcome
 
-Welcome to the **_S4L_<sup>_lite_</sup>** Dashboard Manual. This user manual is intended to provide you with detailed information and background on about how to use the dashboard in **_S4L_<sup>_lite_</sup>**.
+Welcome to the **sim4life.io** Dashboard Manual. This user manual is intended to provide you with detailed information and background on about how to use the dashboard in **sim4life.io**.
 
-If you don't have a user account yet, please request your login via the [**_S4L_<sup>_lite_</sup>** webpage](https://zmt.swiss/support/support/s4l-web-lite/). You can log in at https://s4l-lite.io with a valid email address and password combination. 
+If you don't have a user account yet, please request your login via ```Request Account``` on the [**sim4life.io** webpage](https://https://sim4life.io/). You can log in at https://sim4life.io with a valid email address and password combination. 
 
-Under the ```TUTORIALS``` dashboard tab, you will find a set of pre-built read-only tutorial projects with results and scripts that illustrate how **_S4L_<sup>_lite_</sup>** can be used to solve various simulation problems. 
+Under the ```TUTORIALS``` dashboard tab, you will find a set of pre-built read-only tutorial projects with results and scripts that illustrate how **sim4life.io** can be used to solve various simulation problems. 
 
-For more specific technical information, please refer to the **_S4L_<sup>_lite_</sup>** manual.
+For more specific technical information, please refer to the **sim4life.io** manual.
 
 <br>
 <p align="center">
