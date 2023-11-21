@@ -1,6 +1,6 @@
 # License Agreements
 
-**_S4L_<sup>_lite_</sup>** is powered by the following software and libraries:
+**_sim4life.io>** is powered by the following software and libraries:
 
 * [Sim4Life](/docs/licensing/copyright_Sim4Life.md)
 * [o<sup>2</sup>S<sup>2</sup>PARC](https://github.com/ITISFoundation/osparc-simcore)
