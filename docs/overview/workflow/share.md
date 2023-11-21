@@ -1,6 +1,6 @@
 ## Sharing and Publishing Projects
 
-There are two ways in which your work on the online platform can be accessed by others. You may either share an instance of your Project with other member(s) of an organization, or publish the Project as a Template for other members to copy. 
+There are two ways in which your work on the online platform can be accessed by others. You may either share an instance of your Project with other member(s) of an organization, or publish the Project as a Tutorial for other members to copy. 
 
 <!-- For a full demonstration of these functionalities, take a look at o²S²PARC webinar on collaboration! 
 
@@ -11,7 +11,7 @@ There are two ways in which your work on the online platform can be accessed by 
 -->
 
 ## Organization
-An organization is any group of **_S4L_<sup>_lite_</sup>** users that can share _**Projects**_. To see which organizations you are a part of, go to your user preferences through your [Profile](dashboard.md) button on the top right corner of the user interface. Then choose the ```Organizations``` which will display all organizations you belong to and you may see the members of each organization by clicking on it. The member details will be then displayed in the lower half of the window under ```Members```. There are four different types of members in an organization:
+An organization is any group of **sim4life.io>** users that can share _**Projects**_. To see which organizations you are a part of, go to your user preferences through your [Profile](dashboard.md) button on the top right corner of the user interface. Then choose the ```Organizations``` which will display all organizations you belong to and you may see the members of each organization by clicking on it. The member details will be then displayed in the lower half of the window under ```Members```. There are four different types of members in an organization:
 1. **User**
     * Can not see the members of other organizations
     * Can not share content with the organization
@@ -27,7 +27,7 @@ An organization is any group of **_S4L_<sup>_lite_</sup>** users that can share 
     * Can edit the organization’s description
     * Can delete the organization
 
-To create a new organization, click the ```+ New Organization``` button and add members by entering each new member's email address and then clicking ```Invite```. Note that you may only add members that are already registered **_S4L_<sup>_lite_</sup>** users. If a user is successfully added, you will see a confirmation message and if there was an error, e.g., the email address is not registered, you will see an error message pop up. You may then change each member's privileges by clicking on that member's name. 
+To create a new organization, click the ```+ New Organization``` button and add members by entering each new member's email address and then clicking ```Invite```. Note that you may only add members that are already registered **sim4life.io** users. If a user is successfully added, you will see a confirmation message and if there was an error, e.g., the email address is not registered, you will see an error message pop up. You may then change each member's privileges by clicking on that member's name. 
 
 <!-- ![organization](../../_media/organization.png) -->
 
