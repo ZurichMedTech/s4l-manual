@@ -9,19 +9,23 @@ When you click on a project an overview page will be shown. This page shows more
 
 In addition, by clicking on the left-most icons, you will able to perform more operations on the project.
 
-FIGURE
+<p align="center">
+  <img width="80%" src="assets/dashboard/studydetails.png">
+</p>
 
-The Project Details.
+<p style="text-align: center;">The Project Details.</p>
 
 
 ### Project Workbench
   
 After you open a project, click the ```Restore``` button at the right corner to open the *Interactive* view of the project workbench. You can select *Workbench* to create and edit your flow chart, see your *Services*, debug and run your project .
 
-FIGURE
+<p align="center">
+  <img width="80%" src="assets/dashboard/studydetails.png">
+</p>
 
-   The Project Workbench.
-
+<p style="text-align: center;">The Project Workbench.</p>
+   
 
 (1) Primary Column
  - In the Nodes list tab, you can see the list of Services that are included in the project and rename or delete them. To delete a Service, select the Service and then click the Delete button on the menu bar. You can also rename a Service by selecting a Service and clicking the rename button on the menu bar.
