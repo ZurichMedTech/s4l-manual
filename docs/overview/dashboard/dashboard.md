@@ -1,6 +1,6 @@
 ## Dashboard
 
-The **Dashboard** is the place where ```Projects``` and ```Tutorials``` can be accessed and organized.
+**Dashboard** is your hub which contains projects you have created as well as projects that have been shared with you. Within the **Dashboard**, several important sections and elements can be highlighted (refer to :numref:`s4l_web_dashboard_page`:)
 
 
 <p align="center">
@@ -11,40 +11,55 @@ The **Dashboard** is the place where ```Projects``` and ```Tutorials``` can be a
 (1) Dashboard Tabs
 
   * ```PROJECTS```: Existing projects (own projects, or projects that have been shared by other users) can be accessed and managed, and new projects can be created. Each project is represented by a card.
-  * ```TUTORIALS```: A set of pre-built read-only tutorial projects with results is available to all **_S4L_<sup>_lite_</sup>** users. When a tutorial is selected, a copy is automatically created and added to the user’s ```Projects``` tab. This new copy is editable.
+  * ```TUTORIALS```: A set of pre-built read-only tutorial projects with results is available to all **sim4life.io** users. When a tutorial is selected, a copy is automatically created and added to the user’s ```PROJECTS``` tab. This new copy is editable.
+  * ```SERVICES```: Services are building blocks for projects and can provide data/files, visualize results (2D, 3D), implement code in Jupyter notebooks or perform computations to execute simulations within a project.
+  * ```DATA```: Allows you to browse the output files of all of your active pipelines in one place. This is most useful for downloading the data created on the online platform to your local computer.
 
 (2) Dashboard Buttons
 
-  * Three buttons (from left to right): to open Dashboard Manual; to open the user forum (https://forum.zmt.swiss) and to contact the **_S4L_<sup>_lite_</sup>** support team via email (s4l-support@zmt.swiss); to change the color scheme between light and dark themes.
-  * A menu with the following entities:
+  * Three buttons (from left to right): 
+
+    (1) shows notifications; 
+    
+    (2) allows you to access the *Manual*, send an email on the forum (...) and contact the sim4life.io support team via email (``support@sim4life.io``); 
+    
+    (3) provides you information about your account, allows you to select preferences, change the color scheme between light and dark themes, gives you more information about the Sim4Life services and licensing, finally log-out button to close that instance of **sim4life.io**.
+
+  * This menu consists of the following entities:
     * ```Preferences```: Access to Profile, Security, Confirmation, Tag, and Organization settings.
     * ```Organization```: Direct access to Organization settings.
-    * ```Quick Start```: A short Quick Start guide. It is also displayed when the **_S4L_<sup>_lite_</sup>** is accessed for the first time.
-    * ```License```: Information about the **_S4L_<sup>_lite_</sup>** license as well as the licenses of the underlying technologies.
-    * ```About```: List of Front-end and Back-end technologies employed by the **_S4L_<sup>_lite_</sup>**.
-    * ```Logout```: To log out from the **_S4L_<sup>_lite_</sup>**.
+    * ```Quick Start```: A short Quick Start guide. It is also displayed when the **sim4life.io** is accessed for the first time.
+    * ```License```: Information about the **sim4life.io** license as well as the licenses of the underlying technologies.
+    * ```About```: List of Front-end and Back-end technologies employed by the **sim4life.io**.
+    * ```Logout```: To log out from the **sim4life.io**.
 
-(3) Study Filter and Search
+(3) Filter and Search
 
- * The user can filter and search the projects and tutorials by Tags. You can also search by name and keywords.
+ * This tool allows you to filter *Projects*, *Tutorials* and *Services* (either your own or submitted by others) on respective tabs. You can search and filter by:
+    * ```String, Name```
+    * ```Keywords```
+    * ```Tags```
+    * ```Shared with```
+
 
 (4) Project Card
 
- * Each card listed here represents a simulation project. It can be created by you or shared with you by other users. The card contains descriptive information about the project. Click the card to load the project in a **_S4L_<sup>_lite_</sup>**.
+ * Each card listed here represents a simulation project. It can be created by you, or shared with you by other users. The card contains descriptive information about the project. Click the card to load the project in **sim4life.io**.
 
 (5) Card Options
 
- * When clicked, the user is provided with additional information about the project and with the functionality to edit the description and share the project with other users.
+ * When clicked, the user is provided with additional information about the project and the functionality to edit the description and share the project with other users.
+    * ```Open```: Open a particular project.
     * ```Rename```: Changes the name of the project.
-    * ```Project data…```: Allows the user to download and store simulation projects including results locally. The simulation file and results are stored in the workspace.zip file.
+    * ```Project data…```: Allows the user to download and store simulation projects including results locally. The simulation file and results are stored in the *workspace* folder.
     * ```Share…```: Opens a window where the user can share the simulation project.
+    * ```Tags```: You can add custom tags to your projects to help you classify and filter them.
     * ```Duplicate```: Creates a copy of the simulation project.
-    * ```More Options…```: Opens a window where the user can view additional options for a study including its description, sharing settings, **_S4L_<sup>_lite_</sup>** version used, etc. The same window also permits updating the specific project to the latest **_S4L_<sup>_lite_</sup>** version.
+    * ```Export cMIS```: This will download various Excel files that you need to adhere to the SPARC Dataset Structure (SDS) and publish your computational project on the SPARC Portal.
     * ```Delete```: Completely deletes the project and related data.
+
 
 (6) Starting a New Project
 
-  * To start a session of **_S4L_<sup>_lite_</sup>**, you can click the ```+ Start S4L lite``` button to create a new project. This will start the user interface of **_S4L_<sup>_lite_</sup>**.
-
-
+  * To start a session of **sim4life.io**, you can click the ```+ Start Sim4Life``` button to create a new project. This will start the user interface of **Sim4Life</sup>**.
 
