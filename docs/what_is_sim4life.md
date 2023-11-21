@@ -18,6 +18,9 @@ Please contact support@sim4life.io for further details.
 
 > **_NOTE:_** Existing **Sim4Life** desktop users can easily create an account and start using **sim4life.io**  immediately on the browser without any installation. The simulation files generated using the desktop version are fully compatible and can be smoothly migrated in the **sim4life.io** platform by simply uploading them to the online platform.
 
+<p align="center">  <img src="assets/sim4lifeio.gif"> </p>
+
+
 
 <!-- https://zmt.swiss/in-silico/ 
 It is the first computational life sciences platform integrating computable human phantoms with the most powerful physics solvers and the most advanced tissue models for directly analyzing biological real-world phenomena and complex technical devices in a 3D validated biological and anatomical environment.

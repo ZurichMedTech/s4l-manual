@@ -6,7 +6,7 @@
   - You can also access the *Service Catalog* by clicking on the input or output port of an existing Service, and dragging and dropping the connection arrow to an empty location in the project workbench (refer to **3** in Figure below).
 
 <p align="center">
-  <img width="80%" src="assets/workflow/addservice.png">
+  <img width="90%" src="assets/workflow/addservice.png">
 </p>
 
 <p style="text-align: center;">Adding Services from the catalog in the Workbench.</p>
@@ -19,7 +19,7 @@
 
 
 <p align="center">
-  <img width="80%" src="assets/workflow/deleteservice.png">
+  <img width="90%" src="assets/workflow/deleteservice.png">
 </p>
 
 <p style="text-align: center;">Deleting Services from the catalog in the Workbench.</p>

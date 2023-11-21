@@ -13,7 +13,7 @@
   <img width="80%" src="assets/workflow/runpipeline0.png">
 </p>
 
-<p style="text-align: center;">*Run* button.</p>
+<p style="text-align: center;"> Run button.</p>
 
 
 
