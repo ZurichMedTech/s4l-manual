@@ -11,6 +11,11 @@ For JupyterLab Services, ``work.zip`` is a zip file containing everything in you
 ### Cloud Storage Types
    To embed your data into Services and Studies, and to store, retrieve and maintain your data, we currently offer Sim-Core S3. This is accessible using the *File Picker* or the *Data* tab in the Dashboard. Files can be selected from there to be used within *Services*. Moreover, files can be added (e.g., from your local disk), deleted, or downloaded from one of the cloud storages to your computer.
 
-FIGURE
 
-   File access through the Data tab. 
+<p align="center">
+  <img width="80%" src="assets/dashboard/datapage.png">
+</p>
+
+<p style="text-align: center;">File access through the Data tab.</p>
+
+   
