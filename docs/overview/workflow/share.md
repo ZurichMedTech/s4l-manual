@@ -11,7 +11,8 @@ There are two ways in which your work on the online platform can be accessed by 
 -->
 
 ## Organization
-An organization is any group of **sim4life.io** users that can share _**Projects**_. To see which organizations you are a part of, go to your user preferences through your [Profile](dashboard.md) button on the top right corner of the user interface. Then choose the ```Organizations``` which will display all organizations you belong to and you may see the members of each organization by clicking on it. The member details will be then displayed in the lower half of the window under ```Members```. There are four different types of members in an organization:
+An organization is any group of **sim4life.io** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
+
 1. **User**
     * Can not see the members of other organizations
     * Can not share content with the organization
@@ -27,9 +28,14 @@ An organization is any group of **sim4life.io** users that can share _**Projects
     * Can edit the organization’s description
     * Can delete the organization
 
-To create a new organization, click the ```+ New Organization``` button and add members by entering each new member's email address and then clicking ```Invite```. Note that you may only add members that are already registered **sim4life.io** users. If a user is successfully added, you will see a confirmation message and if there was an error, e.g., the email address is not registered, you will see an error message pop up. You may then change each member's privileges by clicking on that member's name. 
+To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **sim4life.io** users. You may change each member's privileges by clicking on that member's name.
 
-<!-- ![organization](../../_media/organization.png) -->
+<p align="center">
+  <img width="90%" src="assets/organizationpage.png">
+</p>
+
+<p style="text-align: center;"> Generating new organizaton.</p>
+
 
 ## Sharing a Project
 Sharing a Project instance with other users allows collaboration on the same pipeline and code. When one member of the shared users is editing a Project, the Project is locked for the others. When that user finishes and returns to their Dashboard, the changes will be updated when another member accesses the Project. 
@@ -39,17 +45,16 @@ Sharing a Project instance with other users allows collaboration on the same pip
 </p>
 
 To share a Project:
-1. Access the Project's options from the Dashboard by clicking on the three dot button on the upper right hand corner of the Project's card. 
-2. Choose the ```More options``` option. A window should appear.
-3. In the popup window, there is a panel menu to the left. Click on the ```Sharing``` button (second button from the top) to switch to the Sharing tab.
-4. In the Sharing tab, click on the ```Organizations and Members``` dropdown to see the list of users you may share with. Choose one or more people/organizations to share your Project with, and then click the ```Add``` button.
-5. The Project will then appear in the ```PROJECTS``` tab of the user(s) you have shared with. 
+1. Access the Project's options from the Dashboard by clicking on the three dot button on the upper right hand corner of the Project card. Choose the ```Share``` option. A window should appear. This can also be accessed by clicking on the Project card which shows the Project Details. From there, the user can switch to the ```Share``` icon in the left side of the panel. This will display the same sharing window.
+2. In the Sharing tab, click on the ```Add Editors``` to see the list of users you may share with. Choose one or more people/organizations to share your Project with, and then click the ```Share``` button.
+3. The Project will then appear in the ```PROJECTS``` tab of the user(s) you have shared with. 
+
 
 There are three types of roles for projects :
 1. **Viewer**
     * Can open the project
     * Can not modify the project
-2. **Collaborator**
+2. **Editor**
     * Can open the project
     * Can modify the project
     * Can share the project with other members
@@ -63,30 +68,17 @@ There are three types of roles for projects :
 ## Publishing a Project as a Tutorial
 Publishing a Project as a Tutorial will save the state of the Project at the current moment and it will appear as a Tutorial Project in the ```TUTORIALS``` tab of the Dashboard. Any changes made to the original Project after publishing as a Tutorial will not change the Tutorial. Clicking on the Tutorial Project in the ```TUTORIALS``` tab will create a copy of the contents of the Tutorial accessible in your ```PROJECTS``` tab. Any changes you make to this new Project will not affect the original Tutorial. 
 
+
 To publish your Project as a Tutorial:
-1. Access the Project's options from the Dashboard by clicking on the three dot button on the upper right hand corner of the Project's card. 
-2. Choose the ```More options``` option. A window should appear.
-3. In the popup window, there is a panel menu to the left. Click on the ```Save as Tutorial``` button (bottom-most button)  to switch to the Tutorial tab.
-4. Set the access rights of the Tutorial in the popup menu. You may make the Tutorial accessible to only yourself or members of organizations. If you choose Organizations, you will be able to select from the list of organizations that you are a part of. 
-
-<p align="center">
-  <img width="90%" src="assets/tutorials.png">
-</p>
-
-5. You may also choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, scroll down in the modal and make sure the "Publish with data" field is checked. To export the pipeline structure without any customizations, uncheck the box.
-6. Click the ```Publish``` button on the bottom right hand corner.
+1. Click on the Project card and open *Project Details*.
+2. Switch to the *Save as Tutorial* tab in the left panel as shown in the figure below
+3. Set the access rights of the Tutorial. You may make the Tutorial accessible to only yourself (Private) or members of organizations. If you choose Organizations, you will be able to select from the list of organizations that you are a part of.
+4. You may also choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
+6. Click the ```Publish``` button at the bottom right hand corner.
 7. The Tutorial will now appear as a Tutorial Project in your ```TUTORIALS``` tab. If you have chosen to share the Tutorial with members of an organization, others in that same organization will also see the Project in their respective ```TUTORIALS``` tabs. 
 
-There are three types of roles for projects :
-1. **Viewer**
-    * Can create a copy of the tutorial by clicking
-2. **Colloborator**
-    * Can create a copy of the tutorial by clicking
-    * Can edit the tutorial
-    * Can share the tutorial with other members
-    * Can not delete the tutorial
-3. **Owner**
-    * Can create a copy of the tutorial by clicking
-    * Can edit the tutorial
-    * Can share the tutorial with other members
-    * Can delete the tutorial
+
+<p align="center">
+  <img width="90%" src="assets/publishtutorials.png">
+</p>
+

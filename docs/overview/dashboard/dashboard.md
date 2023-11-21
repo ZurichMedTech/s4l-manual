@@ -1,6 +1,6 @@
 ## Dashboard
 
-**Dashboard** is your hub which contains projects you have created as well as projects that have been shared with you. Within the **Dashboard**, several important sections and elements can be highlighted (refer to :numref:`s4l_web_dashboard_page`:)
+**Dashboard** is your hub which contains projects you have created as well as projects that have been shared with you. Within the **Dashboard**, several important sections and elements can be highlighted:
 
 
 <p align="center">
@@ -17,13 +17,7 @@
 
 (2) Dashboard Buttons
 
-  * Three buttons (from left to right): 
-
-    (1) shows notifications; 
-    
-    (2) allows you to access the *Manual*, send an email on the forum (...) and contact the sim4life.io support team via email (``support@sim4life.io``); 
-    
-    (3) provides you information about your account, allows you to select preferences, change the color scheme between light and dark themes, gives you more information about the Sim4Life services and licensing, finally log-out button to close that instance of **sim4life.io**.
+  * Four buttons (from left to right): (1) shows notifications; (2) allows you to access the *Manual*, *Sim4life Support & Download* page along with *Contact Us* information; (3) redit information which includes *Preferences* and *Billing Center*; (4) drop-down menu (see below) with information about your account.
 
   * This menu consists of the following entities:
     * ```Preferences```: Access to Profile, Security, Confirmation, Tag, and Organization settings.
