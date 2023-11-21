@@ -10,7 +10,7 @@ There are two ways in which your work on the online platform can be accessed by 
 
 -->
 
-## Organization
+### Organization
 An organization is any group of **sim4life.io** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
 
 1. **User**
@@ -31,17 +31,17 @@ An organization is any group of **sim4life.io** users that can share **Projects*
 To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **sim4life.io** users. You may change each member's privileges by clicking on that member's name.
 
 <p align="center">
-  <img width="90%" src="assets/organizationpage.png">
+  <img width="70%" src="assets/workflow/organizationpage.png">
 </p>
 
 <p style="text-align: center;"> Generating new organizaton.</p>
 
 
-## Sharing a Project
+### Sharing a Project
 Sharing a Project instance with other users allows collaboration on the same pipeline and code. When one member of the shared users is editing a Project, the Project is locked for the others. When that user finishes and returns to their Dashboard, the changes will be updated when another member accesses the Project. 
 
 <p align="center">
-  <img width="90%" src="assets/share.png">
+  <img width="90%" src="assets/workflow/share.png">
 </p>
 
 To share a Project:
@@ -65,7 +65,7 @@ There are three types of roles for projects :
     * Can share the project with other members
     * Can delete the project
 
-## Publishing a Project as a Tutorial
+### Publishing a Project as a Tutorial
 Publishing a Project as a Tutorial will save the state of the Project at the current moment and it will appear as a Tutorial Project in the ```TUTORIALS``` tab of the Dashboard. Any changes made to the original Project after publishing as a Tutorial will not change the Tutorial. Clicking on the Tutorial Project in the ```TUTORIALS``` tab will create a copy of the contents of the Tutorial accessible in your ```PROJECTS``` tab. Any changes you make to this new Project will not affect the original Tutorial. 
 
 
@@ -79,6 +79,6 @@ To publish your Project as a Tutorial:
 
 
 <p align="center">
-  <img width="90%" src="assets/publishtutorials.png">
+  <img width="90%" src="assets/workflow/publishtutorials.png">
 </p>
 

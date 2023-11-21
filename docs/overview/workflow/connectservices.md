@@ -12,22 +12,37 @@ Once your data are uploaded, you can connect them to the appropriate services in
 
    To re-activate this feature, simply un-check the *Connect ports automatically* box.
 
-FIGURE
+<p align="center">
+  <img width="80%" src="assets/workflow/autoconnect.png">
+</p>
 
-    Enabling auto-connect option.
+<p style="text-align: center;">Enabling auto-connect option.</p>
+
+
 
 ### Connection Indicator
    As a visual guide to connecting services, the Pipeline Workspace UI shows either dashed or solid-line arrows between Services, indicating the status of the port connections. If two Services are connected but the input ports have not been mapped, the connection between the Services will appear as a dashed line. If the ports have been mapped such that the input types of the incoming Service match those of the input ports of the receiving Service, the line between Services will appear as a solid line.
 
-FIGURE
+<p align="center">
+  <img width="80%" src="assets/workflow/connectionindicator.png">
+</p>
 
-    Different connection indicators between services and data.
+<p style="text-align: center;">Different connection indicators between services and data.</p>
+
+    
 
 ### Disconnecting Inputs and Outputs
    To unlink an input, click the unlink button next to the input line in the settings menu.
 
    To delete a connection, simply select the arrow connecting two nodes and a small unlink button will appear in the lower right-hand corner of the Pipeline Workspace. Clicking this button will disconnect the two nodes.
 
-FIGURE 
 
-    Disconnecting indicators between services and data.
+<p align="center">
+  <img width="80%" src="assets/workflow/disconnectindicator.png">
+</p>
+
+<p style="text-align: center;">Disconnecting indicators between services and data.</p>
+
+     
+
+    

@@ -1,5 +1,9 @@
 # Support
 
+### Tutorials
+
+    Login https://sim4life.io  using the valid email address and password combination. Under *TUTORIALS* dashboard tab, you can find a set of pre-built read-only tutorial projects with results and scripts that illustrate how to use **Sim4Life** to solve typical simulation problems. 
+
 ### Send us an email
 
 Please contact us at [support@sim4life.io](mailto:support@sim4life.io) in case you need support.

@@ -1,6 +1,6 @@
 ## Tutorials
 
-A set of several tutorials available in The ```TUTORIALS``` tab of the ```Dashboard``` will help you to get familiar with **Sim4Life**.
+A set of several tutorials available in the ```TUTORIALS``` tab of the ```Dashboard``` will help you to get familiar with **Sim4Life**.
 
 <p align="center">
   <img width="90%" src="assets/dashboard/tutorials.png">

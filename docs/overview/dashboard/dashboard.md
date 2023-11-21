@@ -35,12 +35,20 @@
     * ```Tags```
     * ```Shared with```
 
+(4) Import and Select Projects  
 
-(4) Project Card
+   * ```Import```: Allows the user to import files
+   * ```Select Projects```: Allows the user to interactively select projects among project cards 
+
+(5) Starting a New Project
+
+  * To start a session of **sim4life.io**, you can click the ```+ Start Sim4Life``` button to create a new project. This will start the user interface of **Sim4Life**.
+
+(6) Project Card
 
  * Each card listed here represents a simulation project. It can be created by you, or shared with you by other users. The card contains descriptive information about the project. Click the card to load the project in **sim4life.io**.
 
-(5) Card Options
+(7) Card Options
 
  * When clicked, the user is provided with additional information about the project and the functionality to edit the description and share the project with other users.
     * ```Open```: Open a particular project.
@@ -51,9 +59,4 @@
     * ```Duplicate```: Creates a copy of the simulation project.
     * ```Export cMIS```: This will download various Excel files that you need to adhere to the SPARC Dataset Structure (SDS) and publish your computational project on the SPARC Portal.
     * ```Delete```: Completely deletes the project and related data.
-
-
-(6) Starting a New Project
-
-  * To start a session of **sim4life.io**, you can click the ```+ Start Sim4Life``` button to create a new project. This will start the user interface of **Sim4Life</sup>**.
 

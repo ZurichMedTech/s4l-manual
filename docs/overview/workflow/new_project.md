@@ -9,7 +9,3 @@
 **Copying a Project**
   - You may choose to create a project from an existing one by creating a copy of it. To create a copy of a *Project* go to the ```PROJECTS``` tab of the ```Dashboard```, click on the More options (3-dots) button on the *Project* card, and select ```Duplicate```. 
 
-
-<p align="center">
-  <img width="90%" src="assets/dashboard/new_project.png">
-</p>

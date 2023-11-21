@@ -1,7 +1,7 @@
 
 ## Projects Tab
 
-Each card listed in the ```PROJECTS``` tab represents a simulation project that belongs to you or is shared with you. The user needs to click on the card and then click the ```OPEN``` button on the project details window to open the project. 
+Each card listed in the ```PROJECTS``` tab represents a simulation project that belongs to you or is shared with you. The user needs to click on the card and then click the ```Open``` button on the project details window to open the project. 
 
 ### Project Details
 

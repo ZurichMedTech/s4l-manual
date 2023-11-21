@@ -13,7 +13,7 @@ All these services can be already provided within a project or can be set up fro
 
    
 
-### Service Types:
+### Service Types
 
  * **Computational**: Computational Services such as a ```Python Runner``` will allow the setting of some parameters (e.g., input files) and will perform a computation with no user interaction required. Interactive Services only perform tasks with user interaction, as is the case for services such as the ```JupyterLab```. JupyterLab services will allow you to write and execute code within the JupyterLab GUI, but as with all interactive Services, will not run automatically when a project pipeline is launched. Computational Services, on the other hand, will automatically read all input parameters at runtime and execute the static code embedded inside them.
  * **Interactive:** In terms of viewing, Interactive Services will have a special view in the Workbench through the Interactive View tab. You may occasionally want to maximize this view to have a larger working area. To do this, you can click on the maximize button in the upper right-hand corner of the Interactive View.

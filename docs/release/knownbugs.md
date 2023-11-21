@@ -1,9 +1,9 @@
 ## Known Issues
 
 
-## **_S4L_<sup>_lite_</sup>** V1.0
+## **sim4life.io** Vx.x
 
-### Release Date: 15.02.2023
+### Release Date: xx.01.2024
 
 
 
