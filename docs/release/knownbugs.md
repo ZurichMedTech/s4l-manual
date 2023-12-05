@@ -11,5 +11,5 @@ To experience how smooth the video streaming would normally perform, please try 
 One option might be to switch the streaming mode to "Jpeg", however, we'd recommend to use video streaming whenever possible (with enough bandwidth).
 
 <p align="center">
-  <img width="90%" src="assets/videostream.png">
+  <img width="70%" src="assets/videostream.png">
 </p>
