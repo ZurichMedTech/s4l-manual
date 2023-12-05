@@ -1,8 +1,9 @@
 ## Known Issues
-Version **sim4life.io** V8.0.0
+
+Version: **sim4life.io** V8.0.0
 Internal Release Date: 24.11.2023
 
-#### 1. Video Streaming
+### 1. Video Streaming
 
 We are still experiencing some occasional performance/quality decrease for the video streaming - which we believe is related to unsolved/unknown networking issues, only within Z43.
 
