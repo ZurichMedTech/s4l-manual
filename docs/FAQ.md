@@ -12,6 +12,12 @@ Below you will find answers to some of the questions we get frequently from our 
 4. if you need to upload also the results, then click the small triangle next to ```UPLOAD FILE``` and select ```Upload folder```. Browse the folder you would like to upload and click ```Upload```.
 5. To open this smash file, close this workspace window and click ```Open``` under  ```Dropdown Burger Menu```. Select the .smash file. 
 
+<br>
+<p align="center">
+  <img src="assets/import.gif">
+</p>
+
+
 ---
 
 ### What happens to running simulations when I go back to the dashboard?
