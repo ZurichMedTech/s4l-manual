@@ -33,7 +33,7 @@ The simulations will continue running and your file will be automatically saved.
 When your simulation is ready and if you select aXware or CUDA as Kernel, then you will see three options when you click ```Run``` button. 
 
 <p align="center">
-  <img width="50%" src="assets/runoptions.png">
+  <img width="20%" src="assets/runoptions.png">
 </p>
 
 - (1) ```Run```: if you click this button, your simulation will run in the same machine in AWS where you have the *Sim4Life* running. It is currently a computer with 16 CPU cores, 64 GB of RAM and 16 GB of a T4 NVIDIA GPU card. If you run with this option, you have to keep the GUI open until the simulation is completed.
