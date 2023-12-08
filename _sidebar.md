@@ -22,3 +22,4 @@
 * [Release Notes](/docs/release/releases.md)
     * [Known Issues](/docs/release/knownissues.md)
 * [Support](/docs/support/support.md)
+* [Support](/docs/FAQ.md)
