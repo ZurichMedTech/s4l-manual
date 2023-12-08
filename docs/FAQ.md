@@ -11,6 +11,8 @@ Below you will find answers to some of the questions we get frequently from our 
 4. if you need to upload also the results, then click small triangle next to "UPLOAD FILE" and select "Upload folder". Browse the folder you would like to upload and click "Upload".
 5. To open this smash file, close this workspace window and click "Open" under  "Dropdown Burger Menu". Select the .smash file. 
 
+TODO: gif showing steps
+
 
 ### What happens to running simulations when I go back to the dashboard?
 
@@ -21,3 +23,5 @@ The simulations will continue running and your file will be automatically saved.
 - When you close a sim4life.io project by clicking "Dashboard' button, the project will be automatically. If you didn't give a name before then it will be saved as "AutoSave.smash"
 - When you submit a job to run, the project will be also automatically saved. 
 - In addition, you can enable/disable automatically saving option or set the saving interval on "Application" window which can be reached by clicking "Preferences" via  "Dropdown Burger Menu" and selecting "Application" 
+
+TODO: screenshots
