@@ -3,10 +3,10 @@
 Below you will find answers to some of the questions we get frequently from our users. Please contact us at [s4l-web-feedback@zmt.swiss](mailto:s4l-web-feedback@zmt.swiss) in case you don't find answers to your questions. You can also join our forum page https://forum.zmt.swiss to exchange ideas or tips with other **Sim4Life** users.
 
 1. [How can I import a .smash file generated using Sim4Life desktop?](#faq1)
-2. [What happens to running simulations when I go back to the dashboard?](#faq1)
-3. [Is it possible to automatically save my study?](#faq1)
-4. [What options do I have when I want to run my simulations on GPU?](#faq1)
-5. [I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?](#faq1)
+2. [What happens to running simulations when I go back to the dashboard?](#faq2)
+3. [Is it possible to automatically save my study?](#faq3)
+4. [What options do I have when I want to run my simulations on GPU?](#faq4)
+5. [I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?](#faq5)
 
 ---
 
@@ -72,5 +72,19 @@ If any of the above-mentioned solutions are not available or the performance is 
 </p>
 
 
+<details> <summary><b>5. I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?</b></summary>
+  
+  Please follow the suggestions below to improve the video streaming:
+  - move to a 2.4GHz WiFi network (if available), or
+  - use a cable/ethernet connection.
 
+  If any of the above-mentioned solutions are not available or the performance is not improved, please follow the steps below to change the video streaming settings:
+  - Click “Menu” and select “Preferences”.
+  - Select “3D Rendering | Streaming”.
+  - Change “Streaming type” to “Jpeg”.
+
+  <p align="center">
+     <img width="70%" src="assets/videostream2.png">
+  </p>
+</details>
 
