@@ -65,8 +65,6 @@ If any of the above-mentioned solutions are not available or the performance is 
  - Select “3D Rendering | Streaming”.
  - Change “Streaming type” to “Jpeg”.
 
- we'd recommend to use video streaming whenever possible (with enough bandwidth).
-
 <p align="center">
   <img width="70%" src="assets/videostream2.png">
 </p>
