@@ -72,7 +72,8 @@ If any of the above-mentioned solutions are not available or the performance is 
 </p>
 
 
-<details> <summary><b>5. I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?</b></summary>
+<details> 
+  <summary><b>5. I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?</b></summary>
   
   Please follow the suggestions below to improve the video streaming:
   - move to a 2.4GHz WiFi network (if available), or
