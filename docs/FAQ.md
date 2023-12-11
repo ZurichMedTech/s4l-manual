@@ -12,11 +12,11 @@ Below you will find answers to some of the questions we get frequently from our 
 
 ### <a id="faq1"></a> 1. How can I import a .smash file generated using Sim4Life desktop?
 
-1. Click ```Start Sim4Life``` to create a new project.
-2. Click ```Dropdown Burger Menu``` and select ```File Browser```
-3. Click ```UPLOAD FILE```. Browse the .smash file you would like to upload and click ```Open```. 
-4. if you need to upload also the results, then click the small triangle next to ```UPLOAD FILE``` and select ```Upload folder```. Browse the folder you would like to upload and click ```Upload```.
-5. To open this smash file, close this workspace window and click ```Open``` under  ```Dropdown Burger Menu```. Select the .smash file. 
+- Click ```Start Sim4Life``` to create a new project.
+- Click ```Dropdown Burger Menu``` and select ```File Browser```
+- Click ```UPLOAD FILE```. Browse the .smash file you would like to upload and click ```Open```. 
+- if you need to upload also the results, then click the small triangle next to ```UPLOAD FILE``` and select ```Upload folder```. Browse the folder you would like to upload and click ```Upload```.
+- To open this smash file, close this workspace window and click ```Open``` under  ```Dropdown Burger Menu```. Select the .smash file. 
 
 <br>
 <p align="center">
@@ -78,14 +78,14 @@ If any of the above-mentioned solutions are not available or the performance is 
   Please follow the suggestions below to improve the video streaming:
   - move to a 2.4GHz WiFi network (if available), or
   - use a cable/ethernet connection.
-
+  
   If any of the above-mentioned solutions are not available or the performance is not improved, please follow the steps below to change the video streaming settings:
   - Click “Menu” and select “Preferences”.
   - Select “3D Rendering | Streaming”.
   - Change “Streaming type” to “Jpeg”.
-
-  <p align="center">
-     <img width="70%" src="assets/videostream2.png">
-  </p>
+  
+<p align="center">
+  <img width="70%" src="assets/videostream2.png">
+</p>
 </details>
 
