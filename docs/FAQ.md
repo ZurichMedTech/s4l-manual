@@ -15,10 +15,10 @@ Below you will find answers to some of the questions we get frequently from our 
 ### <a id="faq1"></a> 1. How can I import a .smash file generated using Sim4Life desktop?
 
 - Click ```Start Sim4Life``` to create a new project.
-- Click ```Dropdown Burger Menu``` and select ```File Browser```
+- Click ```Dropdown Burger Menu``` and select ```Open ...```.
 - Click ```UPLOAD FILE```. Browse the .smash file you would like to upload and click ```Open```. 
-- if you need to upload also the results, then click the small triangle next to ```UPLOAD FILE``` and select ```Upload folder```. Browse the folder you would like to upload and click ```Upload```.
-- To open this smash file, close this workspace window and click ```Open``` under  ```Dropdown Burger Menu```. Select the .smash file. 
+- If you need to upload also the results, then click the small triangle next to ```UPLOAD FILE``` and select ```Upload folder```. Browse the folder you would like to upload and click ```Upload```.
+- Select the .smash file and click ```Open``` to open this project. 
 
 <br>
 <p align="center">
@@ -93,4 +93,4 @@ If any of the above-mentioned solutions are not available or the performance is 
 
 ###  <a id="faq6"></a> 6. I lost my internet connection when using sim4life.io. Can I refresh the page?  Will it cause problems with the model?
 
-There is a timeout of 10 minutes. You can refresh the page. After refreshing, if you end up on the dashboard, just open the study again.
+There is a timeout of 15 minutes. You can refresh the page. After refreshing, if you end up on the dashboard, just open the study again.
