@@ -7,6 +7,8 @@ Below you will find answers to some of the questions we get frequently from our 
 3. [Is it possible to automatically save my study?](#faq3)
 4. [What options do I have when I want to run my simulations on GPU?](#faq4)
 5. [I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?](#faq5)
+6. [I lost my internet connection when using sim4life.io. Can I refresh the page?  Will it cause problems with the model?](#faq6)
+
 
 ---
 
@@ -70,7 +72,7 @@ If any of the above-mentioned solutions are not available or the performance is 
 </p>
 
 
-<details> 
+<!-- <details> 
   <summary><b>5. I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?</b></summary>
   
   Please follow the suggestions below to improve the video streaming:
@@ -85,5 +87,10 @@ If any of the above-mentioned solutions are not available or the performance is 
 <p align="center">
   <img width="70%" src="assets/videostream2.png">
 </p>
-</details>
+</details> -->
 
+---
+
+###  <a id="faq6"></a> 6. I lost my internet connection when using sim4life.io. Can I refresh the page?  Will it cause problems with the model?
+
+There is a timeout of 10 minutes. You can refresh the page. After refreshing, if you end up on the dashboard, just open the study again.
