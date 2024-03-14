@@ -1,8 +1,9 @@
 # Release Notes
 
-## **sim4life.io** Vx.x
+## **sim4life.io** V8.0.0, **sim4life.science** V8.0.0
 
-### Release Date: xx.01.2024
+### Release Date: 14.03.2024
+
 
 
 ---
