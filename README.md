@@ -15,4 +15,4 @@ For more specific technical information, please refer to the **Sim4Life** manual
 </p>
 -->
 
-<p align="center">  <img src="assets/s4lintro.gif"> </p>
+<!--  <p align="center">  <img src="assets/s4lintro.gif"> </p>
