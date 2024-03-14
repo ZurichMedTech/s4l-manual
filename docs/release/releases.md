@@ -8,7 +8,7 @@
 
 ---
 
-**sim4life.io** Vx.x is the first public release of the powerful web-based simulation platform that allows you to model and analyze real-world phenomena and design complex technical devices in a validated environment.
+**sim4life.io**/**sim4life.io** V8.0.0 and is the first public release of the powerful web-based simulation platform that allows you to model and analyze real-world phenomena and design complex technical devices in a validated environment.
 
 This document summarizes the features and specifications of this release.
 
