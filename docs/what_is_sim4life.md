@@ -11,14 +11,14 @@ All modeling capabilities from the segmentation of medical image data, anatomica
 
 At the core of **Sim4Life** are the computable, high-fidelity 3D Virtual Population (ViP) human anatomical models. Carefully selected to fully represent global variations in human anatomy, the fully posable, morphable, and validated ViP models along with the IT'IS tissue properties database depict 15 different body types with 120 vital anatomical features and over 300 precisely identified tissues and organs. Cited and applied in hundreds of published studies and papers, the ViP models and the IT'IS material parameter database are continually and meticulously updated, refined, and expanded. 
 
-<p align="center">  <img src="assets/vip3.jpg"> </p>
+<p align="center">  <img src="assets/vip3.png"> </p>
 
 Please contact support@sim4life.io for further details.
 
 
 > **_NOTE:_** Existing **Sim4Life** desktop users can easily create an account and start using **sim4life.io**  immediately on the browser without any installation. The simulation files generated using the desktop version are fully compatible and can be smoothly migrated in the **sim4life.io** platform by simply uploading them to the online platform.
 
-<p align="center">  <img src="assets/sim4lifeio.gif"> </p>
+<!-- <p align="center">  <img src="assets/sim4lifeio.gif"> </p>
 
 
 
