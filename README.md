@@ -8,11 +8,3 @@ Under the ```TUTORIALS``` dashboard tab, you will find a set of pre-built read-o
 
 For more specific technical information, please refer to the **Sim4Life** manual.
 
-<!-- 
-<br>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ZurichMedTech/s4l-assets/main/app/lite/logo/s4llite-white.png" width="50%" />
-</p>
--->
-
-<!--  <p align="center">  <img src="assets/s4lintro.gif"> </p>
