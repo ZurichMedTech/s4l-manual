@@ -20,7 +20,7 @@
     - Computational anatomical models Yoon-sun (the first Korean human model of the IT'IS [Virtual Population](https://sim4life.swiss/virtual-population)) and Duke
     - Material database
     - Python and Jupyter Notebook scripting
-    - Click [here](https://sim4life.swiss/specifications) for complete list
+    - Click [here](https://sim4life.swiss/specifications) for the complete list
 
 
 ## sim4life.io/sim4life.science Platform
