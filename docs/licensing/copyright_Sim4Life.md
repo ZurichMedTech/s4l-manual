@@ -1,7 +1,7 @@
 **Copyright © 2012-2023  
 ZMT Zurich MedTech AG.  
 All rights reserved.  
-Visit our website: [www.zmt.swiss](http://www.zmt.swiss)**
+Visit our website: [www.zmt.swiss](http://www.sim4life.swiss)**
 
 1.  [Zurich MedTech AG (ZMT)](#zurich-medtech-ag-zmt)
 2.  [Blosc - Blocked Shuffling and Compression Library version 1.10.3](#blosc-blocked-shuffling-and-compression-library-version-1103)

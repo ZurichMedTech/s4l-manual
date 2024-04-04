@@ -10,7 +10,7 @@ Please contact us at [support@sim4life.io](mailto:support@sim4life.io) in case y
 
 ### Visit our website
 
-Visit https://www.zmt.swiss for a detailed list of available features, applications and hardware requirements.
+Visit https://www.sim4life.swiss for a detailed list of available features, applications and hardware requirements.
 
 ### Participate in our user forum
 
