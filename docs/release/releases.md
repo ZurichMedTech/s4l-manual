@@ -1,11 +1,11 @@
-# Release Notes (**sim4life.io** & **sim4life.science**)
+# Release Notes (sim4life.io & sim4life.science)
 
 ## Sim4Life Service
-- Version: 8.0.0
-- Release Date: 14.03.2024
 
-Sim4Life V8.0.0 is the first public release of the powerful web-based simulation platform that allows you to model and analyze real-world phenomena and design complex technical devices in a validated environment. 
-- Features
+### Version: 8.0.0
+ - Release Date: 14.03.2024
+ - Sim4Life V8.0.0 is the first public release of the powerful web-based simulation platform that allows you to model and analyze real-world phenomena and design complex technical devices in a validated environment. 
+ - Features
     - Accessible fully online
     - Based on o<sup>2</sup>S<sup>2</sup>PARC technology
     - User-friendly GUI
@@ -24,8 +24,9 @@ Sim4Life V8.0.0 is the first public release of the powerful web-based simulation
 
 
 ## sim4life.io/sim4life.science Platform
-- Version: 1.70.0
-- Release Date: 04.04.2024
-- [Release Notes](https://github.com/ITISFoundation/osparc-simcore/releases/tag/v1.70.0)
+
+### Version: 1.70.0
+ - Release Date: 04.04.2024
+ - [Changelog](https://github.com/ITISFoundation/osparc-simcore/releases/tag/v1.70.0)
 
 
