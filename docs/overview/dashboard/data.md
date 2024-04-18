@@ -13,7 +13,7 @@ For JupyterLab Services, ``work.zip`` is a zip file containing everything in you
 
 
 <p align="center">
-  <img width="80%" src="assets/dashboard/datapage.png">
+  <img width="80%" src="assets/dashboard/DataPage.png">
 </p>
 
 <p style="text-align: center;">File access through the Data tab.</p>

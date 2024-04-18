@@ -13,7 +13,7 @@ Once your data are uploaded, you can connect them to the appropriate services in
    To re-activate this feature, simply un-check the *Connect ports automatically* box.
 
 <p align="center">
-  <img width="80%" src="assets/workflow/autoconnect.png">
+  <img width="80%" src="assets/workflow/AutoConnect.png">
 </p>
 
 <p style="text-align: center;">Enabling auto-connect option.</p>
@@ -24,7 +24,7 @@ Once your data are uploaded, you can connect them to the appropriate services in
    As a visual guide to connecting services, the Pipeline Workspace UI shows either dashed or solid-line arrows between Services, indicating the status of the port connections. If two Services are connected but the input ports have not been mapped, the connection between the Services will appear as a dashed line. If the ports have been mapped such that the input types of the incoming Service match those of the input ports of the receiving Service, the line between Services will appear as a solid line.
 
 <p align="center">
-  <img width="80%" src="assets/workflow/connectionindicator.png">
+  <img width="80%" src="assets/workflow/ConnectionIndicator.png">
 </p>
 
 <p style="text-align: center;">Different connection indicators between services and data.</p>
@@ -38,7 +38,7 @@ Once your data are uploaded, you can connect them to the appropriate services in
 
 
 <p align="center">
-  <img width="80%" src="assets/workflow/disconnectindicator.png">
+  <img width="80%" src="assets/workflow/DisconnectIndicator.png">
 </p>
 
 <p style="text-align: center;">Disconnecting indicators between services and data.</p>

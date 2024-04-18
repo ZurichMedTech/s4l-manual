@@ -10,7 +10,7 @@ To create any model or data processing pipeline, you will often need to load you
 
 
 <p align="center">
-  <img width="90%" src="assets/workflow/loaddata.png">
+  <img width="90%" src="assets/workflow/LoadData.png">
 </p>
 
 <p style="text-align: center;">Adding a local file to a project.</p>
@@ -33,7 +33,7 @@ To create any model or data processing pipeline, you will often need to load you
 
 
 <p align="center">
-  <img width="90%" src="assets/workflow/remotedata.png">
+  <img width="90%" src="assets/workflow/RemoteData.png">
 </p>
 
 <p style="text-align: center;">Adding remotely located data files to a project.</p>

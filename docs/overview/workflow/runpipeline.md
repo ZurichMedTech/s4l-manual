@@ -10,7 +10,7 @@
    To see run progress logs, you may change the Workspace View to the *Logger* tab, by clicking the third button on the Workbench Views menu at the top of the Pipeline Workspace.
 
 <p align="center">
-  <img width="80%" src="assets/workflow/runpipeline0.png">
+  <img width="80%" src="assets/workflow/RunPipeline0.png">
 </p>
 
 <p style="text-align: center;"> Run button.</p>
@@ -18,7 +18,7 @@
 
 
 <p align="center">
-  <img width="80%" src="assets/workflow/runpipeline1.png">
+  <img width="80%" src="assets/workflow/RunPipeline1.png">
 </p>
 
 <p style="text-align: center;">The Progress logs.</p>
@@ -31,7 +31,7 @@
    JupyterLab Services will allow you to write and execute code within the JupyterLab GUI, but as with all Interactive Services, will not run automatically when a project pipeline is launched. To work with an interactive Service, you may double-click on it to access the *Interactive* View.
 
 <p align="center">
-  <img width="80%" src="assets/workflow/runpipeline2.png">
+  <img width="80%" src="assets/workflow/RunPipeline2.png">
 </p>
 
 <p style="text-align: center;"> Interactive services available to run a pipeline.</p>
