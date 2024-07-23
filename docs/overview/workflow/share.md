@@ -31,7 +31,7 @@ An organization is any group of **sim4life.io** users that can share **Projects*
 To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **sim4life.io** users. You may change each member's privileges by clicking on that member's name.
 
 <p align="center">
-  <img width="70%" src="assets/workflow/organizationpage.png">
+  <img width="70%" src="assets/workflow/OrganizationPage.png">
 </p>
 
 <p style="text-align: center;"> Generating new organizaton.</p>
@@ -41,7 +41,7 @@ To create a new organization, click the ```+ New Organization``` button and add 
 Sharing a Project instance with other users allows collaboration on the same pipeline and code. When one member of the shared users is editing a Project, the Project is locked for the others. When that user finishes and returns to their Dashboard, the changes will be updated when another member accesses the Project. 
 
 <p align="center">
-  <img width="90%" src="assets/workflow/share.png">
+  <img width="90%" src="assets/workflow/SharingPage.png">
 </p>
 
 To share a Project:
@@ -79,6 +79,6 @@ To publish your Project as a Tutorial:
 
 
 <p align="center">
-  <img width="90%" src="assets/workflow/publishtutorials.png">
+  <img width="90%" src="assets/workflow/PublishTutorials.png">
 </p>
 
