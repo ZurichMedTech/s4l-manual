@@ -27,11 +27,11 @@
 
 ### [Version: 1.75.0](https://github.com/ZurichMedTech/s4l-manual/blob/main/docs/release/releases.md#v1.75.0)
  - Release Date: 11.07.2024
- - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.75.0.md)
+ - [Changelog](https://github.com/ZurichMedTech/s4l-manual/blob/main/docs/release/releases.md#v1.75.0)
 
 
-### [Version: 1.70.0](https://github.com/ITISFoundation/osparc-simcore/releases/tag/v1.70.0)
+### [Version: 1.70.0](https://github.com/ZurichMedTech/s4l-manual/blob/main/docs/release/releases.md#v1.70.0)
  - Release Date: 04.04.2024
- - [Changelog](https://github.com/ITISFoundation/osparc-simcore/releases/tag/v1.70.0)
+ - [Changelog](https://github.com/ZurichMedTech/s4l-manual/blob/main/docs/release/releases.md#v1.70.0)
 
 
