@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img width="100%" src="assets/dashboard/dashboard.png">
+  <img width="100%" src="assets/dashboard/DashboardPage.png">
 </p>
 
 
