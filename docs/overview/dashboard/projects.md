@@ -33,7 +33,7 @@ After you open a project, click the ```Restore``` button at the right corner to 
 
 (2) Secondary Column
  - When no Service is selected, this tab will show the Project metadata.
- - When a Service is selected as in the case of the image above, the inputs and output parameters of that service will be shown in separate tabs.
+ - When a Service is selected, the inputs and output parameters of that service will be shown in separate tabs.
 
 (3) Workbench Views
  - **Pipeline:** This is the default view of the pipeline, showing Services and their connections
