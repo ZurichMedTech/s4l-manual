@@ -19,7 +19,7 @@ All these services can be already provided within a project or can be set up fro
  * **Interactive:** In terms of viewing, Interactive Services will have a special view in the Workbench through the Interactive View tab. You may occasionally want to maximize this view to have a larger working area. To do this, you can click on the maximize button in the upper right-hand corner of the Interactive View.
 
 <p align="center">
-  <img width="80%" src="assets/dashboard/servicerestore.png">
+  <img width="60%" src="assets/dashboard/servicerestore.png">
 </p>
 
 <p style="text-align: center;">*Restore* button to get into the Interactive Mode.</p>
@@ -27,7 +27,7 @@ All these services can be already provided within a project or can be set up fro
    
 
 <p align="center">
-  <img width="80%" src="assets/dashboard/servicemaximize.png">
+  <img width="60%" src="assets/dashboard/servicemaximize.png">
 </p>
 
 <p style="text-align: center;">*Maximize* button in the Interactive Mode.</p>
