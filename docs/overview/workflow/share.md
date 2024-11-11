@@ -58,7 +58,7 @@ There are three types of roles for projects :
     * Can open the project
     * Can modify the project
     * Can share the project with other members
-    * Can not delete the project
+    * Cannot delete the project
 3. **Owner**
     * Can open the project
     * Can modify the project
@@ -71,10 +71,10 @@ Publishing a Project as a Tutorial will save the state of the Project at the cur
 
 To publish your Project as a Tutorial:
 1. Click on the Project card and open *Project Details*.
-2. Switch to the *Save as Tutorial* tab in the left panel as shown in the figure below
-3. Set the access rights of the Tutorial. You may make the Tutorial accessible to only yourself (Private) or members of organizations. If you choose Organizations, you will be able to select from the list of organizations that you are a part of.
+2. Switch to the *Publish Tutorial* tab in the left panel as shown in the figure below
+3. Set the access rights of the Tutorial. Under *Publish for...*, you will be able to select from the list of organizations that you are a part of.
 4. You may also choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
-6. Click the ```Publish``` button at the bottom right hand corner.
+6. Click the ```Publish``` button at the top right hand corner.
 7. The Tutorial will now appear as a Tutorial Project in your ```TUTORIALS``` tab. If you have chosen to share the Tutorial with members of an organization, others in that same organization will also see the Project in their respective ```TUTORIALS``` tabs. 
 
 
