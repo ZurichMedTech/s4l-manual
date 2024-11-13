@@ -13,14 +13,15 @@ At the core of **Sim4Life** are the computable, high-fidelity 3D Virtual Populat
 
 The full-featured **Sim4Life.web** platform can be accessed in one of two ways:
 * [**sim4life.io**](https://sim4life.io/) - Intended for businesses. Functions on a pay-per-use model.
-* [**sim4life.science**](https://sim4life.science/) - Intended for academic research groups. Funcitons on a pay-per-use model, with an academic discount.
+* [**sim4life.science**](https://sim4life.science/) - Intended for academic research groups. Functions on a pay-per-use model, with a significant academic discount.
 
 A full comparison of the different versions of **Sim4Life** can be found on our website at [sim4life.swiss/specifications](https://sim4life.swiss/specifications).
 
 <p align="center">  <img src="assets/vip3.png"> </p>
 
-Please contact support@sim4life.io for further details.
+You can log in at https://sim4life.io or https://sim4life.science with a valid email address and password combination. If you don't have a user account yet, please request your login via ```Request Account``` on the [**sim4life.io** webpage](https://sim4life.io/) or the [**sim4life.science** webpage](https://sim4life.science/). 
 
+Please contact support@sim4life.io for further details. 
 
 > **_NOTE:_** Existing **Sim4Life** desktop users can easily create an account and start using **sim4life.io** or **sim4life.science**  immediately on the browser without any installation. The simulation files generated using the desktop version are fully compatible and can be smoothly migrated in the **sim4life.io** or **sim4life.science** platform by simply uploading them to the online platform.
 
