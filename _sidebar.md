@@ -1,7 +1,7 @@
 <!-- _sidebar.md -->
 
 * [Welcome](README.md)
-* [What is **sim4life.io**](/docs/what_is_sim4life.md)
+* [What is **Sim4Life.web**](/docs/what_is_sim4life.md)
 * [Overview](/docs/overview/platform.md)
     * [Landing Page](/docs/overview/landing_page.md)
     * [Dashboard](/docs/overview/dashboard/dashboard.md)
