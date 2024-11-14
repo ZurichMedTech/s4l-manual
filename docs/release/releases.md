@@ -25,6 +25,16 @@
 
 ## sim4life.io/sim4life.science Platform
 
+<h3 id="v1.78.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.2.md">Version: 1.78.2</a></h3>
+ 
+ - Release Date: 20.09.2024
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md)
+
+<h3 id="v1.78.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.0.md">Version: 1.78.0</a></h3>
+ 
+ - Release Date: 20.09.2024
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md)
+
 <h3 id="v1.77.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md">Version: 1.77.2</a></h3>
  
  - Release Date: 20.09.2024
