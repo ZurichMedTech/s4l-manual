@@ -2,6 +2,35 @@
 
 ## Sim4Life Service
 
+### Version: 8.2.0
+ - Release Date: 14.11.2024
+ - [Sim4Life](https://sim4life.swiss/) V8.2 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new release introduces significant improvements to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
+ - Selected new features
+    - Introduced a new resource monitoring widget for CPU and RAM usage.
+    - Launched a new Help Center for advanced search.
+    - Added guided tours for first-time users.
+    - IPython-based Python console for simple scripting tasks.
+    - Python upgrade to version to 3.11.9.
+    - Upgrade to Neuron Solver 8.2.6.
+    - New service: s4l-python runners (CPU/MPI and GPU) for running Sim4Life as a computational job.
+- Performance and usability enhancements
+    - Speed improvements in tree navigation for projects with many entities.
+    - Faster application startup using compressed project files.
+    - Completely revamped the video streaming backend for increased stability.
+- New tools
+    - Material calculator.
+    - Screen capture with download functionality.
+    - Cursor and ruler added in the modeler.
+    - Symmetry Tool.
+    - Extrude Patch.
+    - Reconstruct Hull.
+    - Join Wires.
+    - Annotate Tool.
+- Selected improvements
+    - Fixed inconsistency in results when searching with different cases (lowercase or uppercase).
+    - Fixed issue with compiling Neuron mechanism files
+
+
 ### Version: 8.0.0
  - Release Date: 14.03.2024
  - [Sim4Life](https://sim4life.swiss/) V8.0.0 is the first public release of the powerful web-based simulation platform that allows you to model and analyze real-world phenomena and design complex technical devices in a validated environment. 
@@ -28,12 +57,17 @@
 <h3 id="v1.78.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.2.md">Version: 1.78.2</a></h3>
  
  - Release Date: 14.11.2024
- - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md)
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.2.md)
 
 <h3 id="v1.78.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.0.md">Version: 1.78.0</a></h3>
  
  - Release Date: 07.11.2024
- - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md)
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.0.md)
+
+<h3 id="v1.77.3"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.3.md">Version: 1.77.3</a></h3>
+ 
+ - Release Date: 23.09.2024
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.3.md)
 
 <h3 id="v1.77.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.77.2.md">Version: 1.77.2</a></h3>
  
