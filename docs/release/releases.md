@@ -2,9 +2,27 @@
 
 ## Sim4Life Service
 
+
+### Version: 8.2.1
+ - Release Date: 23.01.2025
+ - [Sim4Life](https://sim4life.swiss/) V8.2.1 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new version introduces improvements and fixes to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
+ - Selected new features
+    - Upgrade of all python libraries
+    - Upgrade to JupyterLab 4.3.1
+    - Refactored tree library in frontend to make the trees render much faster
+    - Updated task manager for better UX
+    - Added missing icons
+- Selected improvements
+    - Fixed bug with Task Manger and Multiport Simulations
+    - Fixed slow startup in ImageML plugin
+    - Fixed tree metadata for testing
+    - Fixed bi-directional theme change
+    - Fix shared memory problem for ImageML
+    - Fix bug in context menu
+    - Vulkan configuration mounted into s4l-jupyter
+
 ### Version: 8.2.0
  - Release Date: 14.11.2024
- - [Sim4Life](https://sim4life.swiss/) V8.2 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new release introduces significant improvements to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
  - Selected new features
     - Introduced a new resource monitoring widget for CPU and RAM usage.
     - Launched a new Help Center for advanced search.
@@ -53,6 +71,11 @@
 
 
 ## sim4life.io/sim4life.science Platform
+
+<h3 id="v1.79.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.79.0.md">Version: 1.79.0</a></h3>
+ 
+ - Release Date: 15.01.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.79.0.md) 
 
 <h3 id="v1.78.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.78.2.md">Version: 1.78.2</a></h3>
  
