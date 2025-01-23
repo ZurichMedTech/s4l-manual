@@ -1,7 +1,6 @@
-# Release Notes (sim4life.io & sim4life.science)
+# Release Notes (sim4life.web)
 
 ## Sim4Life Service
-
 
 ### Version: 8.2.1
  - Release Date: 23.01.2025
@@ -46,8 +45,7 @@
     - Annotate Tool.
 - Selected improvements
     - Fixed inconsistency in results when searching with different cases (lowercase or uppercase).
-    - Fixed issue with compiling Neuron mechanism files
-
+    - Fixed issue with compiling Neuron mechanism files\
 
 ### Version: 8.0.0
  - Release Date: 14.03.2024
@@ -70,7 +68,7 @@
     - Click [here](https://sim4life.swiss/specifications) for the complete list
 
 
-## sim4life.io/sim4life.science Platform
+## sim4life.web Platform
 
 <h3 id="v1.79.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.79.0.md">Version: 1.79.0</a></h3>
  
