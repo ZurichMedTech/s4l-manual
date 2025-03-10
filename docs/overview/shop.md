@@ -9,3 +9,5 @@
 **The Shop** includes models from the [IT'IS Foundation Virtual Population](https://itis.swiss/virtual-population/virtual-population/overview/), as well as many [SPEAG Phantoms](https://speag.swiss/products/em-phantoms/overview-2/).
 
 **The Shop** can be found from the dashboard by clicking on the user icon in the top right corner, and then selecting ```The Shop``` from the drop-down menu. 
+
+It can also be found in the top ribbon next to the *Import/Export* button within the **Sim4Life** application when a project is launched.
