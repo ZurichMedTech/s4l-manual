@@ -1,6 +1,6 @@
 ## Workflow
 
-In this section, we will show you how to perform the following actions within **sim4life.io** platform:
+In this section, we will show you how to perform the following actions within **Sim4Life.web** platform:
 
 * [Creating a Project](/docs/overview/workflow/new_project.md)
 * [Sharing and Publishing](/docs/overview/workflow/share.md)
