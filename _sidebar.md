@@ -8,7 +8,6 @@
         * [Projects](/docs/overview/dashboard/projects.md)
         * [Tutorials](/docs/overview/dashboard/tutorials.md)
         * [Services](/docs/overview/dashboard/services.md)
-        * [Data](/docs/overview/dashboard/data.md)
     * [Workflow](/docs/overview/workflow/workflow.md)
         * [Creating a Project](/docs/overview/workflow/new_project.md)
         * [Sharing and Publishing](/docs/overview/workflow/share.md)
