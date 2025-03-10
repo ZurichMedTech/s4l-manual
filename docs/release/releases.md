@@ -70,7 +70,7 @@
 
 ## sim4life.web Platform
 
-<h3 id="v1.79.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.0.md">Version: 1.80.0</a></h3>
+<h3 id="v1.80.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.0.md">Version: 1.80.0</a></h3>
  
  - Release Date: 11.03.2025
  - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.0.md) 
