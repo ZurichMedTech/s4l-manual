@@ -11,7 +11,7 @@ There are two ways in which your work on the online platform can be accessed by 
 -->
 
 ### Organization
-An organization is any group of **sim4life.io** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
+An organization is any group of **Sim4Life.web** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
 
 1. **User**
     * Can not see the members of other organizations
