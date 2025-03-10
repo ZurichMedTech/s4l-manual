@@ -18,7 +18,7 @@ In addition, by clicking on the left-most icons, you will able to perform more o
 
 ### Project Workbench
   
-After you open a project, click the ```Restore``` button at the right corner to open the *Interactive* view of the project workbench. You can select *Workbench* to create and edit your flow chart, see your *Services*, debug and run your project .
+After you open a project, click the ```Restore``` button from the the three dots between the **Dashboard** button and the project name to open the *Interactive* view of the project workbench. You can select *Workbench* to create and edit your flow chart, see your *Services*, debug and run your project .
 
 <p align="center">
   <img width="80%" src="assets/dashboard/studyworkbench.png">
