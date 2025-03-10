@@ -22,7 +22,7 @@ All these services can be already provided within a project or can be set up fro
   <img width="60%" src="assets/dashboard/servicerestore.png">
 </p>
 
-<p style="text-align: center;">*Restore* button to get into the Interactive Mode.</p>
+<p style="text-align: center;">Restore button to get into the Interactive Mode.</p>
 
    
 
@@ -30,7 +30,7 @@ All these services can be already provided within a project or can be set up fro
   <img width="60%" src="assets/dashboard/servicemaximize.png">
 </p>
 
-<p style="text-align: center;">*Maximize* button in the Interactive Mode.</p>
+<p style="text-align: center;">Maximize button in the Interactive Mode.</p>
 
    
 
