@@ -21,15 +21,17 @@
     * ```Quick Start```: A short Quick Start guide.
     * ```Guided Tours```: A short Quick Start guide.
     * ```Dashboard Manual```
-    * ```User forum``` (https://forum.zmt.swiss)
+    * ```Sim4Life Manual```
+    * ```Sim4Life API Reference```
+    * ```FAQs```
     * A shortcut to contact the **Sim4Life.web** support team via email (s4l-support@zmt.swiss);
   * A button to monitor the currently available credits
   * A menu with the following entities:
     * ```Account Settings```
     * ```Billing Center```
-    * ```Preferences```: Access to Profile, Security, Confirmation, Tag, and Organization settings.
-    * ```Organization```: Direct access to Organization settings.
+    * ```Organizations```: Direct access to Organization settings.
     * An option to change between the dark and light themes.
+    * ```The Shop```: Shop to rent anatomical models and phantoms for use in simulations on the platform.
     * ```About```: List of Front-end and Back-end technologies employed by **Sim4Life.web**.
     * ```License```: Information about the **Sim4Life.web** license as well as the licenses of the underlying technologies.
     * ```Logout```: To log out from the **Sim4Life.web**.
@@ -50,7 +52,7 @@
 
 (5) Starting a New Project
 
-  * To start a session of **Sim4Life.web**, you can click the ```+ Start Sim4Life``` button to create a new project. This will start the user interface of **Sim4Life**.
+  * To start a session of **Sim4Life.web**, you can click the ```+ New``` button to create a new project.
 
 (6) Project Card
 
@@ -63,8 +65,9 @@
     * ```Thumbnail```: Changes the thumbnail to help identify different projects at a glance.
     * ```Duplicate```: Creates a copy of the simulation project.
     * ```Share…```: Opens a window where the user can share the simulation project.
-    * ```Tags```: Assigns tags to help organize projects.
-    * ```Project data…```: Allows the user to download and store simulation projects including results locally. The simulation file and results are stored in the workspace.zip file.
-    * ```Billing Settings```: Configure the billing account and type of computer used by the project.
-    * ```Delete```: Completely deletes the project and related data.
+    * ```Tags…```: Assigns tags to help organize projects.
+    * ```Project files…```: Allows the user to download and store simulation projects including results locally. The simulation file and results are stored in the workspace.zip file.
+    * ```Billing Settings…```: Configure the billing account and type of computer used by the project.
+    * ```Move to…```: Allows the user to organize projects by moving them to folders.
+    * ```Delete```: Sends the project and related data to the **Recently Deleted** folder.
 

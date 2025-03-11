@@ -11,7 +11,7 @@ There are two ways in which your work on the online platform can be accessed by 
 -->
 
 ### Organization
-An organization is any group of **sim4life.io** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
+An organization is any group of **Sim4Life.web** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
 
 1. **User**
     * Can not see the members of other organizations
@@ -28,7 +28,7 @@ An organization is any group of **sim4life.io** users that can share **Projects*
     * Can edit the organization’s description
     * Can delete the organization
 
-To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **sim4life.io** users. You may change each member's privileges by clicking on that member's name.
+To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **Sim4Life.web** users (**sim4life.io** or **sim4life.science** depending on your version). You may change each member's privileges by clicking on that member's name.
 
 <p align="center">
   <img width="70%" src="assets/workflow/organizationpage.png">

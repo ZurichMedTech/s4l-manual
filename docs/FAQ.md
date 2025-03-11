@@ -7,7 +7,7 @@ Below you will find answers to some of the questions we get frequently from our 
 3. [Is it possible to automatically save my study?](#faq3)
 4. [What options do I have when I want to run my simulations on GPU?](#faq4)
 5. [I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?](#faq5)
-6. [I lost my internet connection when using sim4life.io. Can I refresh the page?  Will it cause problems with the model?](#faq6)
+6. [I lost my internet connection when using Sim4Life.web. Can I refresh the page?  Will it cause problems with the model?](#faq6)
 
 
 ---
@@ -36,7 +36,7 @@ The simulations will continue running and your file will be automatically saved.
 
 ###  <a id="faq3"></a> 3. Is it possible to automatically save my study?
 
-- When you close a sim4life.io project by clicking ```Dashboard``` button, the project will be automatically saved. If you didn't give a name before then it will be saved as ```AutoSave.smash```
+- When you close a Sim4Life.web project by clicking ```Dashboard``` button, the project will be automatically saved. If you didn't give a name before then it will be saved as ```AutoSave.smash```
 - When you submit a job to run, the project will be also automatically saved. 
 - In addition, you can enable/disable automatically saving option or set the saving interval on ```Application``` window which can be reached by clicking ```Preferences``` via  ```Dropdown Burger Menu``` and selecting ```Application```.
 
@@ -91,6 +91,6 @@ If any of the above-mentioned solutions are not available or the performance is 
 
 ---
 
-###  <a id="faq6"></a> 6. I lost my internet connection when using sim4life.io. Can I refresh the page?  Will it cause problems with the model?
+###  <a id="faq6"></a> 6. I lost my internet connection when using Sim4Life.web. Can I refresh the page?  Will it cause problems with the model?
 
 There is a timeout of 15 minutes. You can refresh the page. After refreshing, if you end up on the dashboard, just open the study again.
