@@ -2,6 +2,34 @@
 
 ## Sim4Life Service
 
+### Version: 8.4.0
+ - Release Date: 11.03.2025
+ - [Sim4Life](https://sim4life.swiss/) V8.4.0 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new version introduces improvements and fixes to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
+ - Selected new features
+    - The Shop
+        - Direct online access to all functionalized ViP models from the IT’IS Foundation and to EM phantoms from SPEAG.
+        - Allows users to incorporate these gold-standard models into simulations directly via the web GUI, simplifying setup and improving workflows.
+    - Intuitive Project Organization
+        - New drag-and-drop functionality for managing simulations online, allowing users to effortlessly organize their workspaces and maintain an overview of multiple projects.
+        - Recovery of deleted items thanks to a new trash bin for projects, folders, and workspaces.
+    - Streamlined Platform Experience and Enhanced Ecosystem
+        - “New” menu simplifies the creation of not only Sim4Life projects, but also of complementary iSeg and JupyterLab projects.
+        - A significant step toward comprehensive support and integration with additional applications, planned for the forthcoming Sim4Life V9.0 release.
+    - Simplified Neuro-Stimulation Settings
+        - A single checkbox in the settings provides access to different tissue/electrode contact impedance models, making it easier to account for the effects of non-ideal interfaces on pulse shapes.
+        - Support for importing compressed .hoc data files, essential for users who want to modify neuron models from online sources such as ModelDB, the Human Brain Project (HBP), or the Allen Brain Institute for use in Sim4Life neuron simulations.
+    - JupyterLab and Cloud-Powered Flexibility
+        - Users can now effortlessly launch a full-featured, standalone JupyterLab environment, complete with access to the Sim4Life Python API and AWS computational resources.
+        - Robust cloud infrastructure provides reliable and accessible simulation capabilities at scale.
+    - Project cards with icons offer a quick visual hint of each project’s contents, making them easier to recognize at a glance.
+    - Simplified full-screen mode improves usability.
+    - Front-end UI configurations are now stored in the backend.
+- No longer broken
+    - Fixed issue where service startup time was unnecessarily long.
+    - Fixed issue where project/study remained locked until the page was refreshed.
+    - Fixed issue where heavy dynamic services would fail to start.
+
+
 ### Version: 8.2.1
  - Release Date: 23.01.2025
  - [Sim4Life](https://sim4life.swiss/) V8.2.1 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new version introduces improvements and fixes to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
@@ -70,10 +98,10 @@
 
 ## sim4life.web Platform
 
-<h3 id="v1.80.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.0.md">Version: 1.80.0</a></h3>
+<h3 id="v1.80.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.2.md">Version: 1.80.2</a></h3>
  
  - Release Date: 11.03.2025
- - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.0.md) 
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.2.md) 
 
 <h3 id="v1.79.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.79.0.md">Version: 1.79.0</a></h3>
  
