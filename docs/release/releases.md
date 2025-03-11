@@ -24,6 +24,7 @@
     - Project cards with icons offer a quick visual hint of each project’s contents, making them easier to recognize at a glance.
     - Simplified full-screen mode improves usability.
     - Front-end UI configurations are now stored in the backend.
+
 - No longer broken
     - Fixed issue where service startup time was unnecessarily long.
     - Fixed issue where project/study remained locked until the page was refreshed.
