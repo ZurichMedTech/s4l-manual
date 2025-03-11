@@ -40,6 +40,7 @@
     - Refactored tree library in frontend to make the trees render much faster
     - Updated task manager for better UX
     - Added missing icons
+
 - Selected improvements
     - Fixed bug with Task Manger and Multiport Simulations
     - Fixed slow startup in ImageML plugin
@@ -59,10 +60,12 @@
     - Python upgrade to version to 3.11.9.
     - Upgrade to Neuron Solver 8.2.6.
     - New service: s4l-python runners (CPU/MPI and GPU) for running Sim4Life as a computational job.
+
 - Performance and usability enhancements
     - Speed improvements in tree navigation for projects with many entities.
     - Faster application startup using compressed project files.
     - Completely revamped the video streaming backend for increased stability.
+
 - New tools
     - Material calculator.
     - Screen capture with download functionality.
@@ -72,6 +75,7 @@
     - Reconstruct Hull.
     - Join Wires.
     - Annotate Tool.
+
 - Selected improvements
     - Fixed inconsistency in results when searching with different cases (lowercase or uppercase).
     - Fixed issue with compiling Neuron mechanism files\
