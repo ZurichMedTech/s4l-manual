@@ -1,14 +1,6 @@
 ## Sharing and Publishing Projects
 
-There are two ways in which your work on the online platform can be accessed by others. You may either share an instance of your Project with other member(s) of an organization, or publish the Project as a Tutorial for other members to copy. 
-
-<!-- For a full demonstration of these functionalities, take a look at o²S²PARC webinar on collaboration! 
-
-<p align="center">
-<iframe width="784" height="441" src="https://www.youtube.com/embed/cI5p0bki258" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
--->
+There are three ways in which your work on the online platform can be accessed by others. You may either share your Project with other member(s) of an organization, publish the Project as a Tutorial for other members of the community to copy or create a Template, which acts as a tutorial only shared with specific selectable users. 
 
 ### Organization
 An organization is any group of **Sim4Life.web** users that can share **Projects**. To see which organizations you are a part of, go to *Organizations* through your *Profile* button at the top right corner of the user interface. This will display all organizations you belong to and you may see the members of each organization by clicking on it. There are four different types of members in an organization:
@@ -66,19 +58,27 @@ There are three types of roles for projects :
     * Can delete the project
 
 ### Publishing a Project as a Tutorial
-Publishing a Project as a Tutorial will save the state of the Project at the current moment and it will appear as a Tutorial Project in the ```TUTORIALS``` tab of the Dashboard. Any changes made to the original Project after publishing as a Tutorial will not change the Tutorial. Clicking on the Tutorial Project in the ```TUTORIALS``` tab will create a copy of the contents of the Tutorial accessible in your ```PROJECTS``` tab. Any changes you make to this new Project will not affect the original Tutorial. 
-
+Publishing a Project as a Tutorial will save the state of the Project at the current moment and it will appear in the ```Public Projects``` tab of the Dashboard. Any changes made to the original Project after publishing as a Tutorial will not change the Tutorial. Other user's will create their own copy automatically when opening the project.
 
 To publish your Project as a Tutorial:
-1. Click on the Project card and open *Project Details*.
-2. Switch to the *Publish Tutorial* tab in the left panel as shown in the figure below
-3. Set the access rights of the Tutorial. Under *Publish for...*, you will be able to select from the list of organizations that you are a part of.
-4. You may also choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
-6. Click the ```Publish``` button at the top right hand corner.
-7. The Tutorial will now appear as a Tutorial Project in your ```TUTORIALS``` tab. If you have chosen to share the Tutorial with members of an organization, others in that same organization will also see the Project in their respective ```TUTORIALS``` tabs. 
+1. Click on the Project card.
+2. Switch to the *Publish* tab in the left panel as shown in the figure below.
+3. You may choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
+4. Click the ```Publish``` button at the top right hand corner.
+5. The Tutorial will now appear in ```Public Projects```.
 
 
 <p align="center">
   <img width="90%" src="assets/workflow/publishtutorials.png">
 </p>
 
+
+### Publishing a Project as a Template
+Publishing a Project as a Tutorial will save the state of the Project at the current moment that is shareable with selected users. Any changes made to the original Project after publishing as a Template will not change the Template. Other user's will create their own copy automatically when opening the project.
+
+To publish your Project as a Template:
+1. Click on the Project card.
+2. Switch to the *Template* tab in the left panel as shown in the figure.
+3. You may choose to publish the Template with the data inside. To publish with data, make sure the "Publish with data" field is checked. 
+4. Click the ```Create Template``` button at the top right hand corner.
+5. Select ```Templates``` on the dashboard, open the project card, go to ```Sharing```, and select users or organizations.
