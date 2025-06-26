@@ -35,3 +35,13 @@
 </p>
 
 <p style="text-align: center;"> Interactive services available to run a pipeline.</p>
+
+### Activity Center
+The Activity Center, always available in the top navigation bar, shows you everything currently running across all your Projects. 
+
+<p align="center">
+  <img width="100%" src="assets/workflow/activity_log.gif">
+</p>
+
+
+
