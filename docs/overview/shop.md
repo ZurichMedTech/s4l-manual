@@ -13,5 +13,5 @@
 It can also be found in the top ribbon next to the *Import/Export* button as *Models/Phantoms* within the **Sim4Life** application.
 
 <p align="center">
-  <img width="70%" src="assets/accessing_shop.gif">
+  <img width="100%" src="assets/accessing_shop.gif">
 </p>
