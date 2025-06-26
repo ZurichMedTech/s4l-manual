@@ -1,8 +1,8 @@
 ## Known Issues
 
-Version: **sim4life.io** V8.0.0, **sim4life.science** V8.0.0
+Version: **sim4life.io** V9.0, **sim4life.science** V9.0
 
-Release Date: 14.03.2024
+Release Date: 26.06.2025
 
 ### 1. Video Streaming
 

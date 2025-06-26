@@ -2,6 +2,48 @@
 
 ## Sim4Life Service
 
+### Version: 9.0
+ - Release Date: 26.06.2025
+ - [Sim4Life](https://sim4life.swiss/) V9.0 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This release includes new tools for optimization, artificial intelligence (AI-) driven modeling, solver plugin support and pipelining to facilitate powerful, automated workflows throughout the entire modeling chain. Sim4Life V9.0 – available for both web and desktop – delivers more power, flexibility, and integration to your simulation workflows.
+
+ - Selected new features
+    - Unified Ecosystem
+        - Fully integrated with the o²S²PARC platform, providing access to all functionalities of o²S²PARC.
+        - Cloud-based platform connecting specialized simulation tools, data analysis pipelines, and computational models from across health and life sciences research communities.
+        - Enables complex, the multi-disciplinary workflows and empowers research beyond capabilities of isolated simulation tools.
+    - Third-Party Plugin Integration
+        - New open plugin framework allowing integration of user-provided or third-party simulators and solvers, thereby expanding the range of supported physics applications and enabling custom workflows, all within a unified interface.
+        - Plugin simulators benefit from Sim4Life’s powerful modeling, preprocessing, cloud computing, and post-processing functionalities.
+    - Rich Automated Workflows
+        - New pipelining and workflow environment allowing users to build, automate, and share advanced multi-stage simulation pipelines.
+        - Connecting applications – in an automated manner – across the expanded Sim4Life ecosystem for integrated, reproducible and collaborative research.
+    - Cloud Scalability – Now on Desktop, Too
+        - Submit and manage simulations via the Sim4Life desktop or web interface.
+        - Access to nearly limitless high-performance computing infrastructure.
+        - Transparent job tracking, real-time cost monitoring, one-click publishing.
+    - Advanced Anatomical Modeling and AI-Powered Tools
+        - New AI-powered segmentation tools for head-related modeling (e.g., automatic 10-10 system placement).
+        - AI-powered registration of detailed atlases to the brain.
+        - Automated trunk segmentation from MRI/CT images.
+        - Expanded tissue property database with updated thermal and water content data.
+    - Meta-Modeling, Optimization, and Uncertainty Quantification (Preview)
+        - New meta-modeling framework leveraging state-of-the-art intelligent algorithms (e.g., from Dakota Project integration (Sandia National Laboratories)).
+        - Surrogate modeling or response surfaces, optimization and uncertainty quantification.
+        - Efficient design-of-experiment tools.
+        - Upcoming expansion with new tools and applications.
+    - Activity Center, accessible anytime from the top navigation bar, displays all active processes across your Projects.
+    - Conversations feature to enhance collaboration and ensure alignment across teams.
+    - Upgrade to CUDA 12.8 runtime everywhere.
+    - Upgrade base docker images from Ubuntu 20.04 to Ubuntu 24.04
+
+- No longer broken
+    - Fixed issues with legend in plots.
+    - Fixed issues with monitoring plots in Task Manager.
+    - Fixed a bug that blocked output ports from downloading, which was preventing dynamic services from starting properly.
+    - Resolved an issue where projects appeared as "undefined-metadata" in the Billing Center — project names now display correctly!
+
+
+
 ### Version: 8.4.0
  - Release Date: 11.03.2025
  - [Sim4Life](https://sim4life.swiss/) V8.4.0 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This new version introduces improvements and fixes to enhance your simulation experience and makes Sim4Life more user-friendly and efficient.
@@ -102,6 +144,11 @@
 
 
 ## sim4life.web Platform
+
+<h3 id="v1.83.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.83.0.md">Version: 1.83.0</a></h3>
+ 
+ - Release Date: 26.06.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.83.0.md) 
 
 <h3 id="v1.80.2"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.80.2.md">Version: 1.80.2</a></h3>
  
