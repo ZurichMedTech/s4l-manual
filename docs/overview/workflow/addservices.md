@@ -11,6 +11,13 @@
 
 <p style="text-align: center;">Adding Services from the catalog in the Workbench.</p>
 
+### Converting Sim4Life to a service
+  - To more easily move from single-app setups to multi-app workflows, you can turn a standalone like **Sim4Life** into a full pipeline Project in just a few clicks.
+  - Simply select ```Convert to Pipeline``` as in the figure below, and continue adding services as needed.
+
+<p align="center">
+  <img width="90%" src="assets/workflow/converting_pipeline.gif">
+</p>
 
 ### Delete a Service
   - In the workspace, click on the three dots buttons of the service you want to delete, then select *Delete* (refer to **1** in Figure below).
