@@ -78,7 +78,11 @@ Publishing a Project as a Tutorial will save the state of the Project at the cur
 
 To publish your Project as a Template:
 1. Click on the Project card.
-2. Switch to the *Template* tab in the left panel as shown in the figure.
+2. Switch to the *Template* tab in the left panel as shown in the figure below.
 3. You may choose to publish the Template with the data inside. To publish with data, make sure the "Publish with data" field is checked. 
 4. Click the ```Create Template``` button at the top right hand corner.
 5. Select ```Templates``` on the dashboard, open the project card, go to ```Sharing```, and select users or organizations.
+
+<p align="center">
+  <img width="90%" src="assets/workflow/publishtemplates.png">
+</p>
