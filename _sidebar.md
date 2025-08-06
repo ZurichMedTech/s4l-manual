@@ -7,7 +7,7 @@
     * [Dashboard](/docs/overview/dashboard/dashboard.md)
         * [Projects](/docs/overview/dashboard/projects.md)
         * [Tutorials](/docs/overview/dashboard/tutorials.md)
-        * [Services](/docs/overview/dashboard/services.md)
+        * [Apps](/docs/overview/dashboard/services.md)
     * [The Shop](/docs/overview/shop.md)
     * [Workflow](/docs/overview/workflow/workflow.md)
         * [Creating a Project](/docs/overview/workflow/new_project.md)
