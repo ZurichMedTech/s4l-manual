@@ -8,6 +8,7 @@ Below you will find answers to some of the questions we get frequently from our 
 4. [What options do I have when I want to run my simulations on GPU?](#faq4)
 5. [I experience degraded rendering and deteriorated performance such as visualization delays in 3D window. What can I do to fix it?](#faq5)
 6. [I lost my internet connection when using Sim4Life.web. Can I refresh the page?  Will it cause problems with the model?](#faq6)
+7. [My Sim4Life application randomly hangs when working with projects containing complex CAD models. How can I fix this?](#faq7)
 
 
 ---
@@ -94,3 +95,21 @@ If any of the above-mentioned solutions are not available or the performance is 
 ###  <a id="faq6"></a> 6. I lost my internet connection when using Sim4Life.web. Can I refresh the page?  Will it cause problems with the model?
 
 There is a timeout of 15 minutes. You can refresh the page. After refreshing, if you end up on the dashboard, just open the study again.
+
+---
+
+###  <a id="faq5"></a> 7. My Sim4Life application randomly hangs when working with projects containing complex CAD models. How can I fix this?
+
+This issue can occur due to the rendering settings. Please try the following steps:
+  - Open Preferences → 3D Renderer → Visuals and set Accurate Transparency Mode to Disabled (you can do this in an empty project).
+  - Close the Preferences window.
+  - Go back to the dashboard, or restart the application via Preferences → Application → Force Application Restart.
+
+Since Preferences are stored globally, the change will apply the next time you start a new Sim4Life service.
+**Important**: Make sure no other project is open when you change the setting. If a project is open, its stored settings may overwrite your Preferences when closing.
+
+
+<p align="center">
+  <img width="70%" src="assets/S4Lhangs.png">
+</p>
+
