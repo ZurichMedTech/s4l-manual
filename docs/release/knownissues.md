@@ -36,9 +36,9 @@ Due to the algorithm used to orchestrate the machines, it may happen that you en
 ### 6. Sim4Life application randomly hangs when working with projects containing complex CAD models
 
 This issue can occur due to the rendering settings. Please try the following steps:
-  - Open Preferences → 3D Renderer → Visuals and set Accurate Transparency Mode to Disabled (you can do this in an empty project).
-  - Close the Preferences window.
-  - Go back to the dashboard, or restart the application via Preferences → Application → Force Application Restart.
+  - Open "Preferences" → "3D Renderer" → "Visuals" and set "Accurate Transparency Mode" to "Disabled" (you can do this in an empty project).
+  - Close the "Preferences" window.
+  - Go back to the dashboard, or restart the application via "Preferences" → "Application" → "Force Application Restart".
 
-Since Preferences are stored globally, the change will apply the next time you start a new Sim4Life service.
-**Important**: Make sure no other project is open when you change the setting. If a project is open, its stored settings may overwrite your Preferences when closing.
+Since "Preferences" are stored globally, the change will apply the next time you start a new Sim4Life service.
+**Important**: Make sure no other project is open when you change the setting. If a project is open, its stored settings may overwrite your "Preferences" when closing.
