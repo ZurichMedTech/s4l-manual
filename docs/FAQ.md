@@ -98,7 +98,7 @@ There is a timeout of 15 minutes. You can refresh the page. After refreshing, if
 
 ---
 
-###  <a id="faq5"></a> 7. My Sim4Life application randomly hangs when working with projects containing complex CAD models. How can I fix this?
+###  <a id="faq7"></a> 7. My Sim4Life application randomly hangs when working with projects containing complex CAD models. How can I fix this?
 
 This issue can occur due to the rendering settings. Please try the following steps:
   - Open Preferences → 3D Renderer → Visuals and set Accurate Transparency Mode to Disabled (you can do this in an empty project).
