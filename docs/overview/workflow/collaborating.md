@@ -3,7 +3,7 @@
 The collaborative workspace feature in the Sim4Life allows multiple users to interact in the project workbench view, each capable of running their own services simultaneously. Here's a detailed description of what is happening:
 
 <p align="center">
-  <img width="80%" src="assets/workflow/Collaborating.gif">
+  <img width="80%" src="assets/workflow/colab.gif">
 </p>
 
 
