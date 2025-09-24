@@ -21,11 +21,23 @@
   * A help button that includes:
     * ```Quick Start```: A short Quick Start guide.
     * ```Guided Tours```: A short Quick Start guide.
-    * ```Dashboard Manual```
-    * ```Sim4Life Manual```
-    * ```Sim4Life API Reference```
-    * ```FAQs```
-    * A shortcut to contact the **Sim4Life.web** support team via email (s4l-support@zmt.swiss);
+    * ```Dashboard Manual```: Technical reference for using the dashboard.
+    * ```Sim4Life Manual```: Full documentation for Sim4Life software.
+    * ```Sim4Life API Reference```: Details for developers using the Sim4Life API.
+    * ```FAQs```: Common questions and answers.
+    * ```Troubleshooting```: Quick fixes for known issues.
+    *  ```Sim4Life Product Page```: Information about the product.
+    * ```Contact us```: Opens a form to submit your message, which will be emailed to s4l-support@zmt.swiss.
+    * ```Conversations```: Clicking on a conversation in the Conversations panel opens the full message thread, allowing you to view past interactions, continue the chat with support, and book a call for direct assistance.
+      
+      <p align="center">
+          <img width="100%" src="assets/dashboard/help_from_dashboard.png">
+      </p>
+
+       <p align="center">
+          <img width="100%" src="assets/dashboard/conversations_from_dashboard.png">
+      </p>
+      
   * A button to monitor the currently available credits
   * A menu with the following entities:
     * ```Account Settings```
@@ -36,10 +48,6 @@
     * ```About```: List of Front-end and Back-end technologies employed by **Sim4Life.web**.
     * ```License```: Information about the **Sim4Life.web** license as well as the licenses of the underlying technologies.
     * ```Logout```: To log out from the **Sim4Life.web**.
-<p align="center">
-  <img width="100%" src="assets/dashboard/help_from_dashboard.png">
-</p>
-
 
 (3) Search
 
