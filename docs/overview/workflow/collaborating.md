@@ -1,11 +1,20 @@
-## Creating a New Project
+## Collaboration
 
-**Project from Scratch**
-  - You may choose to create a project from scratch or based on an existing project. To create an empty project with no services inside, navigate to the *Project* tab of the *Dashboard*, click on the <code> + New </code> button, and select Sim4Life, which will start the user interface of the Sim4Life service.
+The collaborative workspace feature in the Sim4Life allows multiple users to interact in the project workbench view, each capable of running their own services simultaneously. Here's a detailed description of what is happening:
 
-**Project from Tutorial**
-  - You may also create the project from an existing *Tutorials* by navigating to the ```TUTORIALS``` tab of the ```Dashboard``` and clicking on an existing card. This will create a copy of the *Tutorial* project which will from this point on, be accessible from the ```PROJECTS``` tab of the ```Dashboard```. This project will be private unless you decide to share it and any changes you make to the resulting project will not affect the *Tutorial* you have copied from.
+<p align="center">
+  <img width="80%" src="assets/workflow/Collaborating.gif">
+</p>
 
-**Copying a Project**
-  - You may choose to create a project from an existing one by creating a copy of it. To create a copy of a *Project* go to the ```PROJECTS``` tab of the ```Dashboard```, click on the More options (3-dots) button on the *Project* card, and select ```Duplicate```. 
 
+**Shared Workspace Visualization**
+  - On the left side, we see User A's workspace, where multiple projects are displayed in a grid format. These projects include simulations, pipelines, and other files.
+  - On the right side, we see User B's workspace, showing only a subset of projects.
+  - Both users are working under the "My Workspace" tab but are interacting with shared projects.
+**Real-time Collaboration**
+  - A project labeled "Collaborating" appears in both users' workspaces, signifying a shared project.
+  - This feature allows real-time synchronization, where updates or actions performed by one user are immediately visible to others.
+  - The small user avatar icons on the project cards indicate which collaborators are currently active in the workspace.
+**Independent Service Execution**
+  - Each user can run their own service independently within the shared project.
+  
