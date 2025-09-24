@@ -36,6 +36,9 @@
     * ```About```: List of Front-end and Back-end technologies employed by **Sim4Life.web**.
     * ```License```: Information about the **Sim4Life.web** license as well as the licenses of the underlying technologies.
     * ```Logout```: To log out from the **Sim4Life.web**.
+<p align="center">
+  <img width="100%" src="assets/dashboard/help_from_dashboard.png">
+</p>
 
 
 (3) Search
