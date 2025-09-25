@@ -31,11 +31,11 @@
     * ```Conversations```: Clicking on a conversation in the Conversations panel opens the full message thread, allowing you to view past interactions, continue the chat with support, and book a call for direct assistance.
       
       <p align="center">
-          <img width="100%" src="assets/dashboard/help_from_dashboard.png">
+          <img width="50%" src="assets/dashboard/help_from_dashboard.png">
       </p>
 
        <p align="center">
-          <img width="100%" src="assets/dashboard/conversations_from_dashboard.png">
+          <img width="50%" src="assets/dashboard/conversations_from_dashboard.png">
       </p>
       
   * A button to monitor the currently available credits
