@@ -36,10 +36,12 @@
       <p style="text-align: center;"> Help and Support Dialogue Box.</p>
 
 
+
        <p align="center">
           <img width="50%" src="assets/dashboard/conversations_from_dashboard.png">
       </p>
        <p style="text-align: center;"> Conversation Dialogue Box.</p>
+       
       
   * A button to monitor the currently available credits
   * A menu with the following entities:
