@@ -5,7 +5,7 @@ The collaborative workspace feature in the Sim4Life allows multiple users to int
 
 
 <p align="center">
-  <img width="80%" src="assets/workflow/colab.gif">
+  <img width="100%" src="assets/workflow/colab.gif">
 </p>
 
 <p style="text-align: center;"> Shows real-time collaboration.</p>
