@@ -18,10 +18,12 @@
 
   * Activity Center, which shows currently running jobs 
   * A notification bell that shows a message when new projects are shared with a user.
-  * A help button that includes:
-    * ```Quick Start```: A short Quick Start guide.
-    * ```Guided Tours```: A short Quick Start guide.
-    * ```Dashboard Manual```: Technical reference for using the dashboard.
+  * A question mark button that opens Help & Support dialogue box which includes:
+    * ```Ask a Question```: Redirect users to Conversations tab, allowing direct interactions with support members.
+    * ```Book a Call```: Allows users to book a call directly with a support member.
+    * ```Introduction```
+    * ```Explore Tutorials```: Brings the user to the Tutorial tab which contains prebuilt tutorials using different physics solvers.
+    * ```sim4life.io Dashboard Manual```: Technical reference for using the dashboard.
     * ```Sim4Life Manual```: Full documentation for Sim4Life software.
     * ```Sim4Life API Reference```: Details for developers using the Sim4Life API.
     * ```FAQs```: Common questions and answers.
