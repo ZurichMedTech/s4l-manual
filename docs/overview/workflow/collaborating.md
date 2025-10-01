@@ -9,9 +9,6 @@ The collaborative workspace feature in the Sim4Life allows multiple users to int
 
 <p style="text-align: center;"> Shows real-time collaboration.</p>
 
-
-
-
 **Shared Workspace Visualization**
   - On the left side, we see User A's workspace, where multiple projects are displayed in a grid format. These projects include simulations, pipelines, and other files.
   - On the right side, we see User B's workspace, showing only a subset of projects.
