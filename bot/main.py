@@ -145,6 +145,7 @@ async def main():
 
     browser = Browser(
         headless=False,
+        highlight_elements=False,
         allowed_domains=["*.sim4life.io", "sim4life.io", "zurichmedtech.github.io"],
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
