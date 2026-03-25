@@ -1,85 +1,17 @@
 from browser_use import Agent, Browser, BrowserSession, ChatOpenAI, Tools, ActionResult
 from dotenv import load_dotenv
 import asyncio
-import base64
 import getpass
-import glob
-import os
-import re
+import json
+from pathlib import Path
 
 load_dotenv()
 
-REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DOCS_DIR = os.path.join(REPO_ROOT, "docs")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCREEN_SHOT_MARKDOWN = Path(__file__).resolve().parent / "screenshot_list.md"
+assert _SCREEN_SHOT_MARKDOWN.exists()
 
-def discover_screenshots() -> list[dict[str, str]]:
-    """Scan all .md files under docs/ and extract referenced .png asset paths with context."""
-    pattern = re.compile(
-        r'<img[^>]+src="(assets/dashboard/help_from_dashboard.png)"',
-        re.IGNORECASE,
-    )
-    results: dict[str, dict[str, str]] = {}
-
-    for md_path in glob.glob(os.path.join(DOCS_DIR, "**", "*.md"), recursive=True):
-        rel_doc = os.path.relpath(md_path, REPO_ROOT)
-        with open(md_path, encoding="utf-8") as f:
-            lines = f.readlines()
-        for i, line in enumerate(lines):
-            for m in pattern.finditer(line):
-                asset_path = m.group(1)
-                if asset_path in results:
-                    continue
-                # Grab a few surrounding lines for context
-                start = max(0, i - 3)
-                end = min(len(lines), i + 4)
-                context = "".join(lines[start:end]).strip()
-                results[asset_path] = {
-                    "path": asset_path,
-                    "doc": rel_doc,
-                    "context": context,
-                }
-
-    return list(results.values())
-
-
-def build_screenshot_list(screenshots: list[dict[str, str]]) -> str:
-    lines = []
-    for s in screenshots:
-        lines.append(
-            f"- **{s['path']}** (referenced in `{s['doc']}`)\n"
-            f"  Context:\n  ```\n  {s['context']}\n  ```"
-        )
-    return "\n".join(lines)
-
-
-def build_task(screenshots: list[dict[str, str]]) -> str:
-    shadow_dom_helper = """
-**IMPORTANT — Shadow DOM:** The Sim4Life dashboard uses shadow DOM. Standard
-`document.querySelector()` will NOT find elements inside shadow roots. You MUST use
-the `evaluate` action with a recursive shadow-DOM-piercing query. Here is a helper
-you can paste into evaluate:
-
-```js
-function deepQuery(selector) {
-  function search(root) {
-    const el = root.querySelector(selector);
-    if (el) return el;
-    for (const child of root.querySelectorAll('*')) {
-      if (child.shadowRoot) {
-        const found = search(child.shadowRoot);
-        if (found) return found;
-      }
-    }
-    return null;
-  }
-  return search(document);
-}
-```
-
-**Always use `deepQuery` instead of `document.querySelector` when looking for
-`osparc-test-id` attributes.**
-"""
-
+def build_task() -> str:
     return f"""
 You are a screenshot updater for the Sim4Life documentation repository.
 Your job is to log in to the Sim4Life platform, navigate to each relevant UI area, and
@@ -101,17 +33,7 @@ action returns an error, or you cannot navigate to the required UI area after a
 reasonable attempt), **stop immediately**. Do NOT continue to the next screenshot.
 Instead, proceed directly to Step 3 and report the failure.
 
-### Screenshot list
-
-- **assets/dashboard/help_from_dashboard.png**
-  1. On the dashboard page, look for a button represented by a question-mark enclosed in a circle button in the top-right
-     corner of the screen. — this is the Help button. Click it. If you cannot find it, look for images of what the "Help" button looks like
-     in the documentation at https://zurichmedtech.github.io/s4l-manual/#/.
-  2. Wait a moment for the support center window/dialog to appear.
-  3. Use **save_screenshot** with `path="assets/dashboard/help_from_dashboard.png"` and
-     `selector='[osparc-test-id="supportCenterWindow"]'` to capture only the support dialog.
-
-{shadow_dom_helper}
+{_SCREEN_SHOT_MARKDOWN.read_text()}
 
 ## Step 3 — Report
 When done (or when a failure occurs), use the **done** action and provide:
@@ -123,9 +45,60 @@ When done (or when a failure occurs), use the **done** action and provide:
 
 
 # ---------------------------------------------------------------------------
-# Custom tool: save a browser screenshot to a specific repo path
+# Shadow-DOM-piercing JS used by custom tools
+# ---------------------------------------------------------------------------
+DEEP_QUERY_JS = """
+function search(root, selector) {
+    const el = root.querySelector(selector);
+    if (el) return el;
+    for (const child of root.querySelectorAll('*')) {
+        if (child.shadowRoot) {
+            const found = search(child.shadowRoot, selector);
+            if (found) return found;
+        }
+    }
+    return null;
+}
+"""
+
+# ---------------------------------------------------------------------------
+# Custom tools
 # ---------------------------------------------------------------------------
 tools = Tools()
+
+
+@tools.action(
+    description=(
+        "Click an element by CSS selector, piercing shadow DOM boundaries. "
+        "Use this instead of the normal click action when the target element "
+        "is inside a shadow root and cannot be reached by a regular click."
+    ),
+)
+async def deep_click(
+    selector: str, browser_session: BrowserSession
+) -> ActionResult:
+    page = await browser_session.get_current_page()
+    result = await page.evaluate(
+        f"""(sel) => {{
+            {DEEP_QUERY_JS}
+            const el = search(document, sel);
+            if (!el) return 'not found';
+            const rect = el.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const opts = {{bubbles: true, cancelable: true, clientX: cx, clientY: cy}};
+            el.dispatchEvent(new PointerEvent('pointerdown', opts));
+            el.dispatchEvent(new MouseEvent('mousedown', opts));
+            el.dispatchEvent(new PointerEvent('pointerup', opts));
+            el.dispatchEvent(new MouseEvent('mouseup', opts));
+            el.dispatchEvent(new MouseEvent('click', opts));
+            return 'clicked at ' + Math.round(cx) + ',' + Math.round(cy);
+        }}""",
+        selector,
+    )
+    if result == "not found":
+        return ActionResult(error=f"Element not found: {selector}")
+    return ActionResult(extracted_content=f"Clicked {selector} ({result})")
 
 
 @tools.action(
@@ -139,26 +112,31 @@ tools = Tools()
 async def save_screenshot(
     path: str, browser_session: BrowserSession, selector: str = ""
 ) -> ActionResult:
-    abs_path = os.path.join(REPO_ROOT, path)
-    os.makedirs(os.path.dirname(abs_path), exist_ok=True)
+    abs_path = REPO_ROOT / path
+    abs_path.parent.mkdir(parents=True, exist_ok=True)
     if selector:
-        png_bytes = await browser_session.screenshot_element(selector)
-    else:
         page = await browser_session.get_current_page()
-        b64_data = await page.screenshot()
-        png_bytes = base64.b64decode(b64_data)
-    with open(abs_path, "wb") as f:
-        f.write(png_bytes)
+        bounds_json = await page.evaluate(
+            f"""(sel) => {{
+                {DEEP_QUERY_JS}
+                const el = search(document, sel);
+                if (!el) return 'null';
+                const r = el.getBoundingClientRect();
+                return JSON.stringify({{x: r.x, y: r.y, width: r.width, height: r.height}});
+            }}""",
+            selector,
+        )
+        if not bounds_json or bounds_json == "null":
+            return ActionResult(error=f"Element not found: {selector}")
+        clip = json.loads(bounds_json)
+        png_bytes = await browser_session.take_screenshot(clip=clip)
+    else:
+        png_bytes = await browser_session.take_screenshot()
+    abs_path.write_bytes(png_bytes)
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
 async def main():
-    screenshots = discover_screenshots()
-    print(f"Discovered {len(screenshots)} screenshot(s) referenced in docs:\n")
-    for s in screenshots:
-        print(f"  {s['path']}  (from {s['doc']})")
-    print()
-
     email = input("sim4life.io email: ")
     password = getpass.getpass("sim4life.io password: ")
 
@@ -168,15 +146,19 @@ async def main():
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
-        task=build_task(screenshots),
+        task=build_task(),
         llm=llm,
         browser=browser,
         tools=tools,
         sensitive_data={"x_email": email, "x_password": password},
         use_vision=True,
         include_attributes=["osparc-test-id"],
+        extend_system_message=(
+            "The Sim4Life dashboard uses shadow DOM. Standard click actions may "
+            "not reach elements inside shadow roots. When instructed to use "
+            "deep_click, prefer it over the normal click action."
+        ),
         max_actions_per_step=3,
-        generate_gif="screenshot_update.gif",
     )
     history = await agent.run(max_steps=200)
 
