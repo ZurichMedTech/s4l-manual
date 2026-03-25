@@ -53,6 +53,33 @@ def build_screenshot_list(screenshots: list[dict[str, str]]) -> str:
 
 
 def build_task(screenshots: list[dict[str, str]]) -> str:
+    shadow_dom_helper = """
+**IMPORTANT — Shadow DOM:** The Sim4Life dashboard uses shadow DOM. Standard
+`document.querySelector()` will NOT find elements inside shadow roots. You MUST use
+the `evaluate` action with a recursive shadow-DOM-piercing query. Here is a helper
+you can paste into evaluate:
+
+```js
+function deepQuery(selector) {
+  function search(root) {
+    const el = root.querySelector(selector);
+    if (el) return el;
+    for (const child of root.querySelectorAll('*')) {
+      if (child.shadowRoot) {
+        const found = search(child.shadowRoot);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+  return search(document);
+}
+```
+
+**Always use `deepQuery` instead of `document.querySelector` when looking for
+`osparc-test-id` attributes.**
+"""
+
     return f"""
 You are a screenshot updater for the Sim4Life documentation repository.
 Your job is to log in to the Sim4Life platform, navigate to each relevant UI area, and
@@ -66,7 +93,8 @@ take a fresh screenshot that replaces the existing one in the repo.
 ## Step 2 — Take screenshots
 For each screenshot listed below, follow the instructions to navigate to the right UI
 state, then use the **save_screenshot** action to capture it. Pass the exact `path`
-value so the file is saved to the right location.
+value so the file is saved to the right location. You can follow the documentation for sim4life.io
+at https://zurichmedtech.github.io/s4l-manual/#/ for guidance on where/how to find each UI element.
 
 **IMPORTANT — Stop on failure:** If you fail to save a screenshot (the save_screenshot
 action returns an error, or you cannot navigate to the required UI area after a
@@ -76,19 +104,14 @@ Instead, proceed directly to Step 3 and report the failure.
 ### Screenshot list
 
 - **assets/dashboard/help_from_dashboard.png**
-  1. On the dashboard page, look for a question-mark icon or "?" button in the top-right
-     area of the navigation bar — this is the Help / Support button. Click it.
-     If you cannot find it visually, use the **evaluate** action to locate it:
-     `document.querySelector('[osparc-test-id="supportButton"]')?.getBoundingClientRect()`
-     then click it with:
-     `document.querySelector('[osparc-test-id="supportButton"]')?.click()`
+  1. On the dashboard page, look for a button represented by a question-mark enclosed in a circle button in the top-right
+     corner of the screen. — this is the Help button. Click it. If you cannot find it, look for images of what the "Help" button looks like
+     in the documentation at https://zurichmedtech.github.io/s4l-manual/#/.
   2. Wait a moment for the support center window/dialog to appear.
   3. Use **save_screenshot** with `path="assets/dashboard/help_from_dashboard.png"` and
      `selector='[osparc-test-id="supportCenterWindow"]'` to capture only the support dialog.
 
-**Tip:** You can use the **evaluate** action to run JavaScript at any time to inspect
-the page DOM, e.g. `document.querySelector('[osparc-test-id="..."]')?.outerHTML` to
-check if an element exists or to find elements by their `osparc-test-id` attribute.
+{shadow_dom_helper}
 
 ## Step 3 — Report
 When done (or when a failure occurs), use the **done** action and provide:
@@ -139,7 +162,10 @@ async def main():
     email = input("sim4life.io email: ")
     password = getpass.getpass("sim4life.io password: ")
 
-    browser = Browser(headless=False)
+    browser = Browser(
+        headless=False,
+        allowed_domains=["*.sim4life.io", "sim4life.io", "zurichmedtech.github.io"],
+    )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
         task=build_task(screenshots),
@@ -148,6 +174,7 @@ async def main():
         tools=tools,
         sensitive_data={"x_email": email, "x_password": password},
         use_vision=True,
+        include_attributes=["osparc-test-id"],
         max_actions_per_step=3,
         generate_gif="screenshot_update.gif",
     )
