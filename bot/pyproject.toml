@@ -1,0 +1,9 @@
+[project]
+name = "doc-checker"
+version = "0.1.0"
+description = "Browser-Use agent that audits Sim4Life documentation against the live platform"
+requires-python = ">=3.12"
+dependencies = [
+    "browser-use",
+    "python-dotenv",
+]
