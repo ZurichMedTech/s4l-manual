@@ -21,12 +21,14 @@ take a fresh screenshot that replaces the existing one in the repo.
 1. Go to https://sim4life.io
 2. Log in using email x_email and password x_password.
    These are placeholders — the real values are injected securely.
+   You might need to accept the privacy policy and licensing agreement. If so, accept them.
 
 ## Step 2 — Take screenshots
 For each screenshot listed below, follow the instructions to navigate to the right UI
 state, then use the **save_screenshot** action to capture it. Pass the exact `path`
 value so the file is saved to the right location. You can follow the documentation for sim4life.io
 at https://zurichmedtech.github.io/s4l-manual/#/ for guidance on where/how to find each UI element.
+You should carry out the instructions of each screen shot in a new tab (http://sim4life.io) to ensure you start in a clean state.
 
 **IMPORTANT — Stop on failure:** If you fail to save a screenshot (the save_screenshot
 action returns an error, or you cannot navigate to the required UI area after a
