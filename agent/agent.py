@@ -217,7 +217,7 @@ async def run_agent(task: ScreenshotTask, email: str, password: str) -> str:
         ),
         max_actions_per_step=3,
     )
-    history = await agent.run(max_steps=200)
+    history = await agent.run(max_steps=50)
 
     result = history.final_result() or ""
     if not result:
@@ -250,8 +250,12 @@ def main(
     email = input("\nsim4life.io email: ")
     password = getpass.getpass("sim4life.io password: ")
 
-    for task in tasks:
-        asyncio.run(run_agent(task, email, password))
+    async def run_all() -> list[str]:
+        return await asyncio.gather(
+            *(run_agent(task, email, password) for task in tasks)
+        )
+
+    asyncio.run(run_all())
 
 
 if __name__ == "__main__":
