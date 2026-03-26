@@ -9,6 +9,12 @@ When you click on a project an overview page will be shown. This page shows more
 
 In addition, by clicking on the left-most icons, you will able to perform more operations on the project.
 
+<!-- screenshot-instructions: assets/dashboard/studydetails.png
+1. On the dashboard page, find the `Projects` tab in the top center part of the screen and click it.
+2. Select one of the appearing projects and click it. This will open the project details window.
+5. Use **save_screenshot** with `path="assets/dashboard/studydetails.png"` and
+    selecting only the `Project Details` window that just appeared.
+-->
 <p align="center">
   <img width="80%" src="assets/dashboard/studydetails.png">
 </p>
