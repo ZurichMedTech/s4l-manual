@@ -1,3 +1,12 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "browser-use",
+#   "python-dotenv",
+#   "typer",
+# ]
+# ///
+
 from browser_use import Agent, Browser, BrowserSession, ChatOpenAI, Tools, ActionResult
 from dotenv import load_dotenv
 import asyncio
