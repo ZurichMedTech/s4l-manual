@@ -8,11 +8,13 @@
 # ///
 
 from browser_use import Agent, Browser, BrowserSession, ChatOpenAI, Tools, ActionResult
+from dataclasses import dataclass
 from dotenv import load_dotenv
 import asyncio
 import getpass
 import json
 from pathlib import Path
+import re
 from typing import Optional
 
 import typer
@@ -20,9 +22,42 @@ import typer
 load_dotenv()
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-INSTRUCTIONS_DIR = Path(__file__).resolve().parent / "instructions"
-assert INSTRUCTIONS_DIR.is_dir()
+DOCS_DIR = REPO_ROOT / "docs"
 app = typer.Typer()
+
+# ---------------------------------------------------------------------------
+# Screenshot-instruction parser
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ScreenshotTask:
+    asset_path: str       # e.g. "assets/dashboard/help_from_dashboard.png"
+    instructions: str     # the numbered steps
+    source_file: Path     # which .md file it came from
+
+_SCREENSHOT_RE = re.compile(
+    r"<!--\s*screenshot-instructions:\s*(\S+)\s*\n(.*?)-->",
+    re.DOTALL,
+)
+
+def parse_screenshot_tasks(md_file: Path) -> list[ScreenshotTask]:
+    """Extract all screenshot-instructions blocks from a markdown file."""
+    content = md_file.read_text()
+    return [
+        ScreenshotTask(
+            asset_path=m.group(1),
+            instructions=m.group(2).strip(),
+            source_file=md_file,
+        )
+        for m in _SCREENSHOT_RE.finditer(content)
+    ]
+
+def collect_all_tasks(docs_dir: Path) -> list[ScreenshotTask]:
+    """Walk all .md files under docs_dir and collect screenshot tasks."""
+    tasks: list[ScreenshotTask] = []
+    for md_file in sorted(docs_dir.rglob("*.md")):
+        tasks.extend(parse_screenshot_tasks(md_file))
+    return tasks
 
 
 def build_task(instructions_text: str) -> str:
@@ -152,11 +187,14 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def run_agent(instructions_path: Path, email: str, password: str) -> str:
-    """Run a single agent session for one instruction file."""
+async def run_agent(task: ScreenshotTask, email: str, password: str) -> str:
+    """Run a single agent session for one screenshot task."""
     print(f"\n{'='*60}")
-    print(f"Running instructions: {instructions_path.name}")
+    print(f"Screenshot: {task.asset_path}")
+    print(f"    Source: {task.source_file.relative_to(REPO_ROOT)}")
     print(f"{'='*60}\n")
+
+    instructions_text = f"### {task.asset_path}\n{task.instructions}"
 
     browser = Browser(
         headless=False,
@@ -165,7 +203,7 @@ async def run_agent(instructions_path: Path, email: str, password: str) -> str:
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
-        task=build_task(instructions_path.read_text()),
+        task=build_task(instructions_text),
         llm=llm,
         browser=browser,
         tools=tools,
@@ -184,35 +222,36 @@ async def run_agent(instructions_path: Path, email: str, password: str) -> str:
     result = history.final_result() or ""
     if not result:
         result = "\n".join(c for c in history.extracted_content() if c)
-    print(f"\nResult for {instructions_path.name}:\n{result}")
+    print(f"\nResult for {task.asset_path}:\n{result}")
     return result
 
 
 @app.command()
 def main(
-    instructions: Optional[Path] = typer.Argument(
+    asset: Optional[str] = typer.Option(
         None,
-        help="Path to a single instruction .md file in the instructions directory. "
-        "If omitted, all .md files in the instructions directory are run.",
+        help="Substring filter on asset path, e.g. 'help_from_dashboard'. "
+        "If omitted, all screenshot tasks found in docs are run.",
     ),
 ) -> None:
-    """Run the screenshot-update agent for one or all instruction files."""
-    if instructions is not None:
-        if not instructions.exists():
-            raise ValueError(f"File not found: {instructions}")
-        paths = [instructions]
-    else:
-        paths = sorted(INSTRUCTIONS_DIR.glob("*.md"))
+    """Run the screenshot-update agent for screenshot tasks embedded in docs."""
+    tasks = collect_all_tasks(DOCS_DIR)
+    if asset:
+        tasks = [t for t in tasks if asset in t.asset_path]
 
-    typer.echo(f"Found {len(paths)} instruction file(s):")
-    for p in paths:
-        typer.echo(f"  {p.name}")
+    if not tasks:
+        typer.echo("No screenshot tasks found.")
+        raise typer.Exit(1)
+
+    typer.echo(f"Found {len(tasks)} screenshot task(s):")
+    for t in tasks:
+        typer.echo(f"  {t.asset_path}  (from {t.source_file.relative_to(REPO_ROOT)})")
 
     email = input("\nsim4life.io email: ")
     password = getpass.getpass("sim4life.io password: ")
 
-    for path in paths:
-        asyncio.run(run_agent(path, email, password))
+    for task in tasks:
+        asyncio.run(run_agent(task, email, password))
 
 
 if __name__ == "__main__":

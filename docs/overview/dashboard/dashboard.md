@@ -32,11 +32,26 @@
     * ```Contact us```: Opens a form to submit your message, which will be emailed to s4l-support@zmt.swiss.
     * ```Conversations```: Clicking on a conversation in the Conversations panel opens the full message thread, allowing you to view past interactions, continue the chat with support, and book a call for direct assistance.
       
+      <!-- screenshot-instructions: assets/dashboard/help_from_dashboard.png
+      1. On the dashboard page, find the `Help` button in the top right corner of the screen.
+         The button is displayed as a question mark inside a circle. Click the Help button to display the `Help and Support` center.
+      2. Wait a moment for the support center window/dialog to appear.
+      3. Use **save_screenshot** with `path="assets/dashboard/help_from_dashboard.png"` and
+         selecting the window which has appeared by clicking the Help button.
+      -->
       <p align="center">
           <img width="50%" src="assets/dashboard/help_from_dashboard.png">
       </p>
       <p style="text-align: center;"> Help and Support Dialogue Box.</p>
       
+      <!-- screenshot-instructions: assets/dashboard/conversations_from_dashboard.png
+      1. On the dashboard page, find the `Help` button in the top right corner of the screen.
+         The button is displayed as a question mark inside a circle. Click the Help button to display the `Help and Support` center.
+      2. Wait a moment for the support center window/dialog to appear.
+      3. Click the "Conversations" button inside `Help and Support` center.
+      4. Use **save_screenshot** with `path="assets/dashboard/conversations_from_dashboard.png"` and
+         selecting the Conversations window.
+      -->
       <p align="center">
           <img width="50%" src="assets/dashboard/conversations_from_dashboard.png">
       </p>
