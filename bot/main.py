@@ -4,14 +4,19 @@ import asyncio
 import getpass
 import json
 from pathlib import Path
+from typing import Optional
+
+import typer
 
 load_dotenv()
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-_SCREEN_SHOT_MARKDOWN = Path(__file__).resolve().parent / "screenshot_list.md"
-assert _SCREEN_SHOT_MARKDOWN.exists()
+INSTRUCTIONS_DIR = Path(__file__).resolve().parent / "instructions"
+assert INSTRUCTIONS_DIR.is_dir()
+app = typer.Typer()
 
-def build_task() -> str:
+
+def build_task(instructions_text: str) -> str:
     return f"""
 You are a screenshot updater for the Sim4Life documentation repository.
 Your job is to log in to the Sim4Life platform, navigate to each relevant UI area, and
@@ -24,19 +29,18 @@ take a fresh screenshot that replaces the existing one in the repo.
    You might need to accept the privacy policy and licensing agreement. If so, accept them.
 
 ## Step 2 — Take screenshots
-For each screenshot listed below, follow the instructions to navigate to the right UI
+Follow the instructions below to navigate to the right UI
 state, then use the **save_screenshot** action to capture it. Pass the exact `path`
 value so the file is saved to the right location. You can follow the documentation for sim4life.io
 at https://zurichmedtech.github.io/s4l-manual/#/ for guidance on where/how to find each UI element.
-After taking a screenshot you must navigate to http://sim4life.io to ensure you start in a clean state.
-Note that after already logging in, you should remain logged in for subsequent screenshots, so you won't need to log in again.
 
 **IMPORTANT — Stop on failure:** If you fail to save a screenshot (the save_screenshot
 action returns an error, or you cannot navigate to the required UI area after a
 reasonable attempt), **stop immediately**. Do NOT continue to the next screenshot.
 Instead, proceed directly to Step 3 and report the failure.
 
-{_SCREEN_SHOT_MARKDOWN.read_text()}
+## Instructions
+{instructions_text}
 
 ## Step 3 — Report
 When done (or when a failure occurs), use the **done** action and provide:
@@ -139,9 +143,11 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def main():
-    email = input("sim4life.io email: ")
-    password = getpass.getpass("sim4life.io password: ")
+async def run_agent(instructions_path: Path, email: str, password: str) -> str:
+    """Run a single agent session for one instruction file."""
+    print(f"\n{'='*60}")
+    print(f"Running instructions: {instructions_path.name}")
+    print(f"{'='*60}\n")
 
     browser = Browser(
         headless=False,
@@ -150,7 +156,7 @@ async def main():
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
-        task=build_task(),
+        task=build_task(instructions_path.read_text()),
         llm=llm,
         browser=browser,
         tools=tools,
@@ -166,19 +172,39 @@ async def main():
     )
     history = await agent.run(max_steps=200)
 
-    print("\n" + "=" * 60)
-    print("RESULT")
-    print("=" * 60)
-    result = history.final_result()
-    if result:
-        print(result)
+    result = history.final_result() or ""
+    if not result:
+        result = "\n".join(c for c in history.extracted_content() if c)
+    print(f"\nResult for {instructions_path.name}:\n{result}")
+    return result
+
+
+@app.command()
+def main(
+    instructions: Optional[Path] = typer.Argument(
+        None,
+        help="Path to a single instruction .md file in the instructions directory. "
+        "If omitted, all .md files in the instructions directory are run.",
+    ),
+) -> None:
+    """Run the screenshot-update agent for one or all instruction files."""
+    if instructions is not None:
+        if not instructions.exists():
+            raise ValueError(f"File not found: {instructions}")
+        paths = [instructions]
     else:
-        print("No final result produced.")
-        for content in history.extracted_content():
-            if content:
-                print(content)
-    print("=" * 60)
+        paths = sorted(INSTRUCTIONS_DIR.glob("*.md"))
+
+    typer.echo(f"Found {len(paths)} instruction file(s):")
+    for p in paths:
+        typer.echo(f"  {p.name}")
+
+    email = input("\nsim4life.io email: ")
+    password = getpass.getpass("sim4life.io password: ")
+
+    for path in paths:
+        asyncio.run(run_agent(path, email, password))
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    app()
