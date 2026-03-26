@@ -8,7 +8,7 @@ All these apps can be already provided within a project or can be set up from sc
 1. On the dashboard page, find the `+ New` button in the top left corner of the screen. Click the button.
 2. In the window which appears, click the `Pipeline` subitem.
 3. Wait for Pipeline to be created. If the `Project Options` pop-up appears, simply click `New`.
-4. Now right click on the window marked `osparc-test-id="desktopWindow"` and click on the appearing "+" button.
+4. Now right click on the Desktop Window and click on the appearing "+" button.
 3. Use **save_screenshot** with `path="assets/dashboard/serviceworkbench.png"` and
     selecting only the `Service Catalog` window.
 -->
