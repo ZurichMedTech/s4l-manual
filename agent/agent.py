@@ -60,14 +60,14 @@ def collect_all_tasks(docs_dir: Path) -> list[ScreenshotTask]:
     return tasks
 
 
-def build_task(instructions_text: str) -> str:
+def build_task(instructions_text: str, url: str) -> str:
     return f"""
 You are a screenshot updater for the Sim4Life documentation repository.
 Your job is to log in to the Sim4Life platform, navigate to each relevant UI area, and
 take a fresh screenshot that replaces the existing one in the repo.
 
 ## Step 1 — Log in
-1. Go to https://sim4life.io
+1. Go to {url}
 2. Log in using email x_email and password x_password.
    These are placeholders — the real values are injected securely.
    You might need to accept the privacy policy and licensing agreement. If so, accept them.
@@ -75,7 +75,7 @@ take a fresh screenshot that replaces the existing one in the repo.
 ## Step 2 — Take screenshots
 Follow the instructions below to navigate to the right UI
 state, then use the **save_screenshot** action to capture it. Pass the exact `path`
-value so the file is saved to the right location. You can follow the documentation for sim4life.io
+value so the file is saved to the right location. You can follow the documentation for {url}
 at https://zurichmedtech.github.io/s4l-manual/#/ for guidance on where/how to find each UI element.
 
 **IMPORTANT — Stop on failure:** If you fail to save a screenshot (the save_screenshot
@@ -187,7 +187,7 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def run_agent(task: ScreenshotTask, email: str, password: str) -> str:
+async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -> str:
     """Run a single agent session for one screenshot task."""
     print(f"\n{'='*60}")
     print(f"Screenshot: {task.asset_path}")
@@ -199,11 +199,10 @@ async def run_agent(task: ScreenshotTask, email: str, password: str) -> str:
     browser = Browser(
         headless=False,
         highlight_elements=False,
-        allowed_domains=["*.sim4life.io", "sim4life.io", "zurichmedtech.github.io"],
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
-        task=build_task(instructions_text),
+        task=build_task(instructions_text, url),
         llm=llm,
         browser=browser,
         tools=tools,
@@ -225,9 +224,11 @@ async def run_agent(task: ScreenshotTask, email: str, password: str) -> str:
     print(f"\nResult for {task.asset_path}:\n{result}")
     return result
 
-
 @app.command()
 def main(
+    url: str = typer.Argument(
+        help="Base URL of the Sim4Life deployment, e.g. 'https://sim4life.io'.",
+    ),
     asset: Optional[str] = typer.Option(
         None,
         help="Substring filter on asset path, e.g. 'help_from_dashboard'. "
@@ -247,12 +248,12 @@ def main(
     for t in tasks:
         typer.echo(f"  {t.asset_path}  (from {t.source_file.relative_to(REPO_ROOT)})")
 
-    email = input("\nsim4life.io email: ")
-    password = getpass.getpass("sim4life.io password: ")
+    email = input(f"\n{url} email: ")
+    password = getpass.getpass(f"{url} password: ")
 
     async def run_all() -> list[str]:
         return await asyncio.gather(
-            *(run_agent(task, email, password) for task in tasks)
+            *(run_agent(task, email, password, url) for task in tasks)
         )
 
     asyncio.run(run_all())
