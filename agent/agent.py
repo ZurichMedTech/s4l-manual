@@ -68,7 +68,8 @@ take a fresh screenshot that replaces the existing one in the repo.
 
 ## Step 1 — Log in
 1. Go to {url}
-2. Log in using email x_email and password x_password.
+2. Wait for a moment for the page to load and for any popups to appear.
+3. Log in using email x_email and password x_password.
    These are placeholders — the real values are injected securely.
    You might need to accept the privacy policy and licensing agreement. If so, accept them.
 

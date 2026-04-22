@@ -22,6 +22,13 @@ An organization is any group of **Sim4Life.web** users that can share **Projects
 
 To create a new organization, click the ```+ New Organization``` button and add a title and description for new organization. You can then add members to this particular organization by entering each new member's email address and then clicking *Add*.  Note that you may only add members that are already registered **Sim4Life.web** users (**sim4life.io** or **sim4life.science** depending on your version). You may change each member's privileges by clicking on that member's name.
 
+<!-- screenshot-instructions: assets/workflow/organizationpage.png
+1. On the dashboard page, find the Profile button on the top right corner of the page. Click the Profile button.
+2. In the menu which pops open, click the `Organizations` button to open the `Organizations` window.
+3. Inside the `Organizations` window, click the `New Organization` button.
+4. Use **save_screenshot** with `path="assets/workflow/organizationpage.png"` and
+    selecting the `Organizations` window.
+-->
 <p align="center">
   <img width="70%" src="assets/workflow/organizationpage.png">
 </p>
