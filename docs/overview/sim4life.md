@@ -11,5 +11,5 @@ The full manual can also be accessed at any time under the *Help* menu:
 
 <br>
 <p align="center">
-  <img src="assets/manual_from_dashboard.png">
+  <img src="assets/dashboard/help_from_dashboard.png">
 </p>
