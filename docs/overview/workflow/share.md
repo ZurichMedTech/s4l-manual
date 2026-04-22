@@ -39,6 +39,15 @@ To create a new organization, click the ```+ New Organization``` button and add 
 ### Sharing a Project
 Sharing a Project instance with other users allows collaboration on the same pipeline and code. When one member of the shared users is editing a Project, the Project is locked for the others. When that user finishes and returns to their Dashboard, the changes will be updated when another member accesses the Project. 
 
+<!-- screenshot-instructions: assets/workflow/share.png
+1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
+2. Wait a moment for all projects to display.
+3. Click one of the projects in order to display the `Project Window`.
+4. In the `Project Window` click the `Sharing` button. If the `Sharing` button is deactivated (greyed out), close the `Project Window` by clicking the `x` in the top right corner and go back to step 3 to select a different project.
+5. In the content which appears, click the `Share` button.
+6. Use **save_screenshot** with `path="assets/workflow/share.png"` and
+    selecting the `Project Window`.
+-->
 <p align="center">
   <img width="90%" src="assets/workflow/share.png">
 </p>
@@ -74,7 +83,14 @@ To publish your Project as a Tutorial:
 4. Click the ```Publish``` button at the top right hand corner.
 5. The Tutorial will now appear in ```Public Projects```.
 
-
+<!-- screenshot-instructions: assets/workflow/publishtutorials.png
+1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
+2. Wait a moment for all projects to display.
+3. Click one of the projects in order to display the `Project Window`.
+4. In the `Project Window` click the `Publish` button. If the `Publish` button is deactivated (greyed out), close the `Project Window` by clicking the `x` in the top right corner and go back to step 3 to select a different project.
+5. Use **save_screenshot** with `path="assets/workflow/publishtutorials.png"` and
+    selecting the `Project Window`.
+-->
 <p align="center">
   <img width="90%" src="assets/workflow/publishtutorials.png">
 </p>
