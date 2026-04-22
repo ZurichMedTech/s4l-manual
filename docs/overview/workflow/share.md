@@ -90,6 +90,14 @@ To publish your Project as a Template:
 4. Click the ```Create Template``` button at the top right hand corner.
 5. Select ```Templates``` on the dashboard, open the project card, go to ```Sharing```, and select users or organizations.
 
+<!-- screenshot-instructions: assets/workflow/publishtemplates.png
+1. On the dashboard page, click the `Projects` tab at the top of the page.
+2. Wait a moment for the project cards to load.
+3. Click one of the projects to display the `Project Window`.
+4. Within the `Project Window`, click the `Template` button on the left.
+5. Use **save_screenshot** with `path="assets/workflow/publishtemplates.png"` and
+    selecting the `Project Window`.
+-->
 <p align="center">
   <img width="90%" src="assets/workflow/publishtemplates.png">
 </p>
