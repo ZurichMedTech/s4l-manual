@@ -17,7 +17,7 @@ import getpass
 import json
 from pathlib import Path
 import re
-from typing import Optional
+from typing import Final, Optional
 
 import typer
 
@@ -51,6 +51,8 @@ _SCREENSHOT_RE = re.compile(
     r"<!--\s*screenshot-instructions:\s*(\S+)\s*\n(.*?)-->",
     re.DOTALL,
 )
+
+_CONCURRENT_TASKS: Final[int] = 5  # how many agent sessions to run in parallel (browser instances)
 
 def parse_screenshot_tasks(md_file: Path) -> list[ScreenshotTask]:
     """Extract all screenshot-instructions blocks from a markdown file."""
@@ -276,9 +278,11 @@ def main(
     password = getpass.getpass(f"{url} password: ")
 
     async def run_all() -> list[AgentResult]:
-        return await asyncio.gather(
-            *(run_agent(task, email, password, url, headless=headless) for task in tasks)
-        )
+        semaphore = asyncio.Semaphore(_CONCURRENT_TASKS)
+        async def limited(task: ScreenshotTask) -> AgentResult:
+            async with semaphore:
+                return await run_agent(task, email, password, url, headless=headless)
+        return await asyncio.gather(*(limited(t) for t in tasks))
 
     results = asyncio.run(run_all())
 
