@@ -18,4 +18,5 @@ docker run --rm -it \
     "$IMAGE_NAME" \
     "run" \
     "$SCRIPT_DIR_NAME/agent.py" \
+    "--headless" \
     "$@"
