@@ -2,6 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR_NAME="$(basename "$SCRIPT_DIR")"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 IMAGE_NAME="s4l-agent"
@@ -10,7 +11,9 @@ CACHE_VOLUME="s4l-agent-uv-cache"
 # Run the agent
 docker run --rm -it \
     --read-only \
-    --runtime=runsc \
+    --cap-drop=ALL \
+    --security-opt=no-new-privileges \
+    --pids-limit=500 \
     -v "$REPO_ROOT:/app" \
     -v "$CACHE_VOLUME:/root/.cache" \
     --tmpfs /tmp \
@@ -18,5 +21,5 @@ docker run --rm -it \
     -e "OPENAI_API_KEY=${OPENAI_API_KEY:-}" \
     "$IMAGE_NAME" \
     "run" \
-    "agent/agent.py" \
+    "$SCRIPT_DIR_NAME/agent.py" \
     "$@"

@@ -10,10 +10,9 @@ fresh screenshots — all without any manual clicking.
 | Requirement | Why |
 |---|---|
 | **Docker** | The agent runs inside a container so you don't have to install Python or any dependencies on your machine. |
-| **gVisor (`runsc`) runtime** | The container is launched with `--runtime=runsc` for sandboxing. |
 | **An OpenAI API key** | The agent uses GPT-4.1-mini to decide how to navigate the UI. |
 
-## Installing Docker and gVisor
+## Installing Docker
 
 ### Docker
 
@@ -27,32 +26,6 @@ After installing, verify it works:
 ```bash
 docker run --rm hello-world
 ```
-
-### gVisor runtime
-
-gVisor provides an additional sandbox layer. Install it on Linux with:
-
-```bash
-# Add the gVisor repo and install runsc
-sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
-curl -fsSL https://gvisor.dev/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/gvisor-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/gvisor-archive-keyring.gpg] https://storage.googleapis.com/gvisor/releases release main" | sudo tee /etc/apt/sources.list.d/gvisor.list > /dev/null
-sudo apt-get update && sudo apt-get install -y runsc
-
-# Register the runtime with Docker and restart
-sudo runsc install
-sudo systemctl restart docker
-```
-
-Verify the runtime is available:
-
-```bash
-docker run --rm --runtime=runsc hello-world
-```
-
-> **macOS / Windows:** gVisor is not natively supported. If you only need to run
-> the agent locally without the sandbox, you can edit `sandboxed-agent.bash` and
-> remove the `--runtime=runsc` flag.
 
 ## Quick Start
 
@@ -76,7 +49,7 @@ browser, and all required libraries.
 ### 3. Run the agent
 
 ```bash
-screenshot-agent/sandboxed-agent.bash https://sim4life.io
+screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click
 ```
 
 The agent will:
@@ -94,7 +67,7 @@ and which (if any) failed.
 To update only a specific screenshot, use `--asset` with part of the file name:
 
 ```bash
-screenshot-agent/sandboxed-agent.bash https://sim4life.io --asset help_from_dashboard
+screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --asset help_from_dashboard
 ```
 
 ### Headless mode
@@ -102,7 +75,7 @@ screenshot-agent/sandboxed-agent.bash https://sim4life.io --asset help_from_dash
 To run without a visible browser window, add `--headless`:
 
 ```bash
-screenshot-agent/sandboxed-agent.bash https://sim4life.io --headless
+screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --headless
 ```
 
 ## How Screenshot Instructions Work
