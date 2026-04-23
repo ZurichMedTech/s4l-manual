@@ -86,7 +86,7 @@ To publish your Project as a Tutorial:
 <!-- screenshot-instructions: assets/workflow/publishtutorials.png
 1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
 2. Wait a moment for all projects to display.
-3. Click one of the projects in order to display the `Project Window`.
+3. Select a project which is **not** titled "screenshot-agent-project". Click on the project you selected in order to display the `Project Window`.
 4. In the `Project Window` click the `Publish` button. If the `Publish` button is deactivated (greyed out), close the `Project Window` by clicking the `x` in the top right corner and go back to step 3 to select a different project.
 5. Use **save_screenshot** with `path="assets/workflow/publishtutorials.png"` and
     selecting the `Project Window`.
