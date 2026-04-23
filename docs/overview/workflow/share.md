@@ -109,7 +109,7 @@ To publish your Project as a Template:
 <!-- screenshot-instructions: assets/workflow/publishtemplates.png
 1. On the dashboard page, click the `Projects` tab at the top of the page.
 2. Wait a moment for the project cards to load.
-3. Click one of the projects to display the `Project Window`.
+3. Select one of the available projects which is **not** titled "screenshot-agent-project". Click o that projects to display the `Project Window`.
 4. Within the `Project Window`, click the `Template` button on the left.
 5. Use **save_screenshot** with `path="assets/workflow/publishtemplates.png"` and
     selecting the `Project Window`.
