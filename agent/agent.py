@@ -200,7 +200,7 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -> AgentResult:
+async def run_agent(task: ScreenshotTask, email: str, password: str, url: str, headless: bool = False) -> AgentResult:
     """Run a single agent session for one screenshot task."""
     print(f"\n{'='*60}")
     print(f"Screenshot: {task.asset_path}")
@@ -210,7 +210,7 @@ async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -
     instructions_text = f"### {task.asset_path}\n{task.instructions}"
 
     browser = Browser(
-        headless=False,
+        headless=headless,
         highlight_elements=False,
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
@@ -254,6 +254,10 @@ def main(
         help="Substring filter on asset path, e.g. 'help_from_dashboard'. "
         "If omitted, all screenshot tasks found in docs are run.",
     ),
+    headless: bool = typer.Option(
+        False,
+        help="Run the browser in headless mode (no visible window).",
+    ),
 ) -> None:
     """Run the screenshot-update agent for screenshot tasks embedded in docs."""
     tasks = collect_all_tasks(DOCS_DIR)
@@ -273,7 +277,7 @@ def main(
 
     async def run_all() -> list[AgentResult]:
         return await asyncio.gather(
-            *(run_agent(task, email, password, url) for task in tasks)
+            *(run_agent(task, email, password, url, headless=headless) for task in tasks)
         )
 
     results = asyncio.run(run_all())
