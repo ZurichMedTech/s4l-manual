@@ -39,7 +39,7 @@
 <!-- screenshot-instructions: assets/workflow/updateservice.png
 1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
 2. Wait a moment for all projects to display.
-3. Select one of the project cards which does not have the title "screenshot-agent-project". Click on that project in order to display the `Project Window`.
+3. Select one of the project cards which does not have the title "screenshot-agent-project". Click on the project you selected in order to display the `Project Window`.
 4. In the `Project Window` click the `Services Updates` button. If the `Services Updates` button is deactivated (greyed out), close the `Project Window` by clicking the `x` in the top right corner and go back to step 3 to select a different project. If when you have clicked the `Services Updates` button it says that the study/project is empty, close the project by clicking the `x` in the top right corner and go back to step 3 to select a different project.
 5. Use **save_screenshot** with `path="assets/workflow/updateservice.png"` and
     selecting the `Project Window`.
