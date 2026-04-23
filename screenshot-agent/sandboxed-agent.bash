@@ -10,10 +10,6 @@ CACHE_VOLUME="s4l-agent-uv-cache"
 
 # Run the agent
 docker run --rm -it \
-    --read-only \
-    --cap-drop=ALL \
-    --security-opt=no-new-privileges \
-    --pids-limit=500 \
     -v "$REPO_ROOT:/app" \
     -v "$CACHE_VOLUME:/root/.cache" \
     --tmpfs /tmp \
