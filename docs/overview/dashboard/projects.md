@@ -11,7 +11,7 @@ In addition, by clicking on the left-most icons, you will able to perform more o
 
 <!-- screenshot-instructions: assets/dashboard/studydetails.png
 1. On the dashboard page, find the `Projects` tab in the top center part of the screen and click it.
-2. Select one of the appearing projects and click it. This will open the project details window.
+2. Select one of the appearing projects which is *not* tagged with the tag "screenshot-agent". Click on that project. This will open the project details window.
 5. Use **save_screenshot** with `path="assets/dashboard/studydetails.png"` and
     selecting only the `Project Details` window that just appeared.
 -->

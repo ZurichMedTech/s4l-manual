@@ -6,11 +6,10 @@ All these apps can be already provided within a project or can be set up from sc
 
 <!-- screenshot-instructions: assets/dashboard/serviceworkbench.png
 1. On the dashboard page, find the `+ New` button in the top left corner of the screen. Click the button.
-2. In the window which appears, click the `Pipeline` subitem.
-3. Wait for Pipeline to be created. If the `Project Options` pop-up appears, simply click `New`.
+2. In the window which appears, click the `Pipeline` subitem. Note that you must remain within the `My Workspace` tab on the left side of the page. If you by accident click another tab, make sure to navigate back.
+3. Wait for Pipeline to be created. If the `Project Options` pop-up appears, give your project the title "service-catalog-project" and add the tag `screenshot-agent` to the project. Then click the `New` button.
 4. Now right click on the Desktop Window and click on the appearing "+" button.
-5. Use **save_screenshot** with `path="assets/dashboard/serviceworkbench.png"` and
-    selecting only the `Service Catalog` window.
+5. Use **save_screenshot** with `path="assets/dashboard/serviceworkbench.png"` and selecting only the `Service Catalog` window.
 -->
 <p align="center">
   <img width="80%" src="assets/dashboard/serviceworkbench.png">
