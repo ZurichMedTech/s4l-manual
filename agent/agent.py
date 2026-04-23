@@ -2,6 +2,7 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #   "browser-use",
+#   "pydantic",
 #   "python-dotenv",
 #   "typer",
 # ]
@@ -10,6 +11,7 @@
 from browser_use import Agent, Browser, BrowserSession, ChatOpenAI, Tools, ActionResult
 from dataclasses import dataclass
 from dotenv import load_dotenv
+from pydantic import BaseModel
 import asyncio
 import getpass
 import json
@@ -34,6 +36,16 @@ class ScreenshotTask:
     asset_path: str       # e.g. "assets/dashboard/help_from_dashboard.png"
     instructions: str     # the numbered steps
     source_file: Path     # which .md file it came from
+
+class ScreenshotReport(BaseModel):
+    success: bool
+    message: str
+
+@dataclass
+class AgentResult:
+    task: ScreenshotTask
+    success: bool
+    message: str
 
 _SCREENSHOT_RE = re.compile(
     r"<!--\s*screenshot-instructions:\s*(\S+)\s*\n(.*?)-->",
@@ -188,7 +200,7 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -> str:
+async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -> AgentResult:
     """Run a single agent session for one screenshot task."""
     print(f"\n{'='*60}")
     print(f"Screenshot: {task.asset_path}")
@@ -215,15 +227,22 @@ async def run_agent(task: ScreenshotTask, email: str, password: str, url: str) -
             "not reach elements inside shadow roots. When instructed to use "
             "deep_click, prefer it over the normal click action."
         ),
+        output_model_schema=ScreenshotReport,
         max_actions_per_step=3,
     )
     history = await agent.run(max_steps=50)
 
-    result = history.final_result() or ""
-    if not result:
-        result = "\n".join(c for c in history.extracted_content() if c)
-    print(f"\nResult for {task.asset_path}:\n{result}")
-    return result
+    report: ScreenshotReport | None = history.structured_output
+    if report:
+        success = report.success
+        message = report.message
+    else:
+        success = False
+        message = history.final_result() or "\n".join(
+            c for c in history.extracted_content() if c
+        )
+    print(f"\nResult for {task.asset_path}: success={success}\n{message}")
+    return AgentResult(task=task, success=success, message=message)
 
 @app.command()
 def main(
@@ -252,12 +271,30 @@ def main(
     email = input(f"\n{url} email: ")
     password = getpass.getpass(f"{url} password: ")
 
-    async def run_all() -> list[str]:
+    async def run_all() -> list[AgentResult]:
         return await asyncio.gather(
             *(run_agent(task, email, password, url) for task in tasks)
         )
 
-    asyncio.run(run_all())
+    results = asyncio.run(run_all())
+
+    succeeded = [r for r in results if r.success]
+    failed = [r for r in results if not r.success]
+
+    typer.echo(f"\n{'='*60}")
+    typer.echo("SUMMARY")
+    typer.echo(f"{'='*60}")
+    typer.echo(f"{len(succeeded)}/{len(results)} screenshots updated successfully.\n")
+    if succeeded:
+        typer.echo("Updated:")
+        for r in succeeded:
+            typer.echo(f"  ✅ {r.task.asset_path}")
+    if failed:
+        typer.echo("\nFailed:")
+        for r in failed:
+            typer.echo(f"  ❌ {r.task.asset_path}")
+            for line in r.message.splitlines()[:3]:
+                typer.echo(f"      {line}")
 
 
 if __name__ == "__main__":
