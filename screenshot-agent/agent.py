@@ -18,7 +18,7 @@ import json
 from pathlib import Path
 import re
 from typing import Final, Optional
-from tenacity import AsyncRetrying, RetryError, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
+from tenacity import AsyncRetrying, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
 import typer
 
 
@@ -211,30 +211,30 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
 
     instructions_text = f"### {task.asset_path}\n{task.instructions}"
 
-    browser = Browser(
-        browser_profile=BrowserProfile(
-            headless=headless,
-            highlight_elements=False,
-            extra_chromium_args=["--no-sandbox"], # the agent should be run inside a sandbox
-        )
+    browser_profile = BrowserProfile(
+        headless=headless,
+        highlight_elements=False,
+        extra_chromium_args=["--no-sandbox"], # the agent should be run inside a sandbox
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
-    agent = Agent(
-        task=build_task(instructions_text, url),
-        llm=llm,
-        browser=browser,
-        tools=tools,
-        sensitive_data={"x_email": email, "x_password": password},
-        use_vision=True,
-        include_attributes=["osparc-test-id"],
-        extend_system_message=(
-            "The Sim4Life dashboard uses shadow DOM. Standard click actions may "
-            "not reach elements inside shadow roots. When instructed to use "
-            "deep_click, prefer it over the normal click action."
-        ),
-        output_model_schema=ScreenshotReport,
-        max_actions_per_step=3,
-    )
+    task_text = build_task(instructions_text, url)
+    def _create_agent(browser: Browser) -> Agent:
+        return Agent(
+                task=task_text,
+                llm=llm,
+                browser=browser,
+                tools=tools,
+                sensitive_data={"x_email": email, "x_password": password},
+                use_vision=True,
+                include_attributes=["osparc-test-id"],
+                extend_system_message=(
+                    "The Sim4Life dashboard uses shadow DOM. Standard click actions may "
+                    "not reach elements inside shadow roots. When instructed to use "
+                    "deep_click, prefer it over the normal click action."
+                ),
+                output_model_schema=ScreenshotReport,
+                max_actions_per_step=3,
+            )
 
     async for attempt in AsyncRetrying(
         stop=stop_after_attempt(retries),
@@ -242,6 +242,7 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
         retry=retry_if_exception_type(TryAgain),
     ):
         with attempt:
+            agent = _create_agent(Browser(browser_profile=browser_profile))
             history = await agent.run(max_steps=50)
             report: ScreenshotReport | None = history.structured_output
             if report is None or report.success is False:
