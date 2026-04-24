@@ -12,7 +12,7 @@ CACHE_VOLUME="s4l-agent-uv-cache"
 docker run --rm -it \
     --user="$(id -u):$(id -g)" \
     -v "$REPO_ROOT:/app" \
-    -v "$CACHE_VOLUME:/.cache" \
+    -v "$CACHE_VOLUME:/uv-cache" \
     --tmpfs /.config \
     -e "OPENAI_API_KEY=${OPENAI_API_KEY:-}" \
     "$IMAGE_NAME" \
