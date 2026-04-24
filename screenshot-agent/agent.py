@@ -5,12 +5,12 @@
 #   "pydantic",
 #   "python-dotenv",
 #   "typer",
+#   "tenacity",
 # ]
 # ///
 
-from browser_use import Agent, Browser, BrowserSession, ChatOpenAI, Tools, ActionResult
+from browser_use import Agent, Browser, BrowserProfile, BrowserSession, ChatOpenAI, Tools, ActionResult
 from dataclasses import dataclass
-from dotenv import load_dotenv
 from pydantic import BaseModel
 import asyncio
 import getpass
@@ -18,11 +18,11 @@ import json
 from pathlib import Path
 import re
 from typing import Final, Optional
-
+from tenacity import AsyncRetrying, RetryError, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
 import typer
 
-load_dotenv()
 
+_DEFAULT_RETRIES: Final[int] = 2  # how many times to retry a failed agent session before giving up on that screenshot
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
 app = typer.Typer()
@@ -202,7 +202,7 @@ async def save_screenshot(
     return ActionResult(extracted_content=f"Screenshot saved to {path}")
 
 
-async def run_agent(task: ScreenshotTask, email: str, password: str, url: str, headless: bool = False) -> AgentResult:
+async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str, headless: bool, retries: int) -> AgentResult:
     """Run a single agent session for one screenshot task."""
     print(f"\n{'='*60}")
     print(f"Screenshot: {task.asset_path}")
@@ -212,8 +212,11 @@ async def run_agent(task: ScreenshotTask, email: str, password: str, url: str, h
     instructions_text = f"### {task.asset_path}\n{task.instructions}"
 
     browser = Browser(
-        headless=headless,
-        highlight_elements=False,
+        browser_profile=BrowserProfile(
+            headless=headless,
+            highlight_elements=False,
+            extra_chromium_args=["--no-sandbox"], # the agent should be run inside a sandbox
+        )
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     agent = Agent(
@@ -232,9 +235,18 @@ async def run_agent(task: ScreenshotTask, email: str, password: str, url: str, h
         output_model_schema=ScreenshotReport,
         max_actions_per_step=3,
     )
-    history = await agent.run(max_steps=50)
 
-    report: ScreenshotReport | None = history.structured_output
+    async for attempt in AsyncRetrying(
+        stop=stop_after_attempt(retries),
+        wait=wait_fixed(2),
+        retry=retry_if_exception_type(TryAgain),
+    ):
+        with attempt:
+            history = await agent.run(max_steps=50)
+            report: ScreenshotReport | None = history.structured_output
+            if report is None or report.success is False:
+                raise TryAgain(f"Agent reported failure or no structured output: {report}")
+
     if report:
         success = report.success
         message = report.message
@@ -257,8 +269,12 @@ def main(
         "If omitted, all screenshot tasks found in docs are run.",
     ),
     headless: bool = typer.Option(
-        False,
+        True,
         help="Run the browser in headless mode (no visible window).",
+    ),
+    retries: int = typer.Option(
+        _DEFAULT_RETRIES,
+        help="Number of times to retry a failed agent session before giving up on that screenshot.",
     ),
 ) -> None:
     """Run the screenshot-update agent for screenshot tasks embedded in docs."""
@@ -281,7 +297,7 @@ def main(
         semaphore = asyncio.Semaphore(_CONCURRENT_TASKS)
         async def limited(task: ScreenshotTask) -> AgentResult:
             async with semaphore:
-                return await run_agent(task, email, password, url, headless=headless)
+                return await run_agent(task=task, email=email, password=password, url=url, headless=headless, retries=retries)
         return await asyncio.gather(*(limited(t) for t in tasks))
 
     results = asyncio.run(run_all())

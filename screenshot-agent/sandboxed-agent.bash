@@ -10,9 +10,6 @@ CACHE_VOLUME="s4l-agent-uv-cache"
 
 # Run the agent
 docker run --rm -it \
-    --pids-limit=1000 \
-    --security-opt=no-new-privileges \
-    --cap-drop=ALL \
     --user="$(id -u):$(id -g)" \
     -v "$REPO_ROOT:/app" \
     -v "$CACHE_VOLUME:/.cache" \
@@ -21,5 +18,9 @@ docker run --rm -it \
     "$IMAGE_NAME" \
     "run" \
     "$SCRIPT_DIR_NAME/agent.py" \
-    "--headless" \
     "$@"
+
+
+# --pids-limit=1000 \
+# --security-opt=no-new-privileges \
+# --cap-drop=ALL \
