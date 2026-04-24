@@ -18,6 +18,7 @@ import json
 from pathlib import Path
 import re
 from typing import Final, Optional
+from urllib.parse import urlparse
 from tenacity import AsyncRetrying, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
 import typer
 
@@ -215,6 +216,7 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
         headless=headless,
         highlight_elements=False,
         extra_chromium_args=["--no-sandbox"], # the agent should be run inside a sandbox
+        allowed_domains=[urlparse(url).hostname],
     )
     llm = ChatOpenAI(model="gpt-4.1-mini")
     task_text = build_task(instructions_text, url)
