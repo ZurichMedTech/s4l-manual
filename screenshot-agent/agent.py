@@ -25,6 +25,7 @@ import typer
 
 _DEFAULT_RETRIES: Final[int] = 2  # how many times to retry a failed agent session before giving up on that screenshot
 _DEFAULT_WAIT_SECONDS: Final[int] = 2  # how many seconds to wait between retries
+_DEFAULT_MAX_STEPS: Final[int] = 30
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
@@ -248,7 +249,7 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
         ):
             with attempt:
                 agent = _create_agent(Browser(browser_profile=browser_profile))
-                history = await agent.run(max_steps=50)
+                history = await agent.run(max_steps=_DEFAULT_MAX_STEPS)
                 report: ScreenshotReport | None = history.structured_output
                 if report is None or report.success is False:
                     raise TryAgain(f"Agent reported failure or no structured output: {report}")
