@@ -19,7 +19,7 @@ from pathlib import Path
 import re
 from typing import Final, Optional
 from urllib.parse import urlparse
-from tenacity import AsyncRetrying, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
+from tenacity import AsyncRetrying, RetryError, retry_if_exception_type, stop_after_attempt, wait_fixed, TryAgain
 import typer
 
 
@@ -238,17 +238,20 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
                 max_actions_per_step=3,
             )
 
-    async for attempt in AsyncRetrying(
-        stop=stop_after_attempt(retries),
-        wait=wait_fixed(2),
-        retry=retry_if_exception_type(TryAgain),
-    ):
-        with attempt:
-            agent = _create_agent(Browser(browser_profile=browser_profile))
-            history = await agent.run(max_steps=50)
-            report: ScreenshotReport | None = history.structured_output
-            if report is None or report.success is False:
-                raise TryAgain(f"Agent reported failure or no structured output: {report}")
+    try:
+        async for attempt in AsyncRetrying(
+            stop=stop_after_attempt(retries),
+            wait=wait_fixed(2),
+            retry=retry_if_exception_type(TryAgain),
+        ):
+            with attempt:
+                agent = _create_agent(Browser(browser_profile=browser_profile))
+                history = await agent.run(max_steps=50)
+                report: ScreenshotReport | None = history.structured_output
+                if report is None or report.success is False:
+                    raise TryAgain(f"Agent reported failure or no structured output: {report}")
+    except RetryError:
+        pass
 
     if report:
         success = report.success
