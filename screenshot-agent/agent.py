@@ -26,6 +26,7 @@ import typer
 _DEFAULT_RETRIES: Final[int] = 2  # how many times to retry a failed agent session before giving up on that screenshot
 _DEFAULT_WAIT_SECONDS: Final[int] = 2  # how many seconds to wait between retries
 _DEFAULT_MAX_STEPS: Final[int] = 30
+_LLM: Final[str] = "gpt-4.1-mini"  # which LLM to use for the agent sessions
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
@@ -221,7 +222,7 @@ async def run_agent(*, task: ScreenshotTask, email: str, password: str, url: str
         extra_chromium_args=["--no-sandbox"], # the agent should be run inside a sandbox
         allowed_domains=[urlparse(url).hostname],
     )
-    llm = ChatOpenAI(model="gpt-4.1-mini")
+    llm = ChatOpenAI(model=_LLM)
     task_text = build_task(instructions_text, url)
     def _create_agent(browser: Browser) -> Agent:
         return Agent(
