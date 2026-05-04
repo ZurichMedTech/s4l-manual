@@ -3,9 +3,10 @@
 An automated tool that keeps the Sim4Life manual screenshots up to date. It reads
 special instructions embedded in the documentation Markdown files, launches a
 browser, logs in to a Sim4Life deployment, navigates to the right pages, and saves
-fresh screenshots — all without any manual clicking.
+fresh screenshots.
 
 ## Prerequisites
+> Note: If you are working on windows, you must use this tool via WSL. It is not expected to work on Windows natively.
 
 | Requirement | Why |
 |---|---|
@@ -19,7 +20,6 @@ fresh screenshots — all without any manual clicking.
 Follow the official instructions for your operating system:
 
 - **Linux (Ubuntu/Debian):** <https://docs.docker.com/engine/install/ubuntu/>
-- **macOS / Windows:** Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 After installing, verify it works:
 
@@ -40,7 +40,7 @@ export OPENAI_API_KEY="sk-..."
 From the repository root, run:
 
 ```bash
-screenshot-agent/build.bash
+bash screenshot-agent/build.bash
 ```
 
 This builds a Docker image called `s4l-agent` that contains Python, the
@@ -49,7 +49,7 @@ browser, and all required libraries.
 ### 3. Run the agent
 
 ```bash
-screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click
+bash screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click
 ```
 
 The agent will:
@@ -67,16 +67,12 @@ and which (if any) failed.
 To update only a specific screenshot, use `--asset` with part of the file name:
 
 ```bash
-screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --asset help_from_dashboard
+bash screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --asset help_from_dashboard
 ```
 
-### Headless mode
+### Non headless mode
 
-To run without a visible browser window, add `--headless`:
-
-```bash
-screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --headless
-```
+By default the agent runs in a "headless" mode. I.e. the browser window never opens on the users desktop. This is a requirement when running the agent inside the sandbox container. However, for debugging purposes it can be useful to run the agent in a non-headless mode to see how the agent is actually navigating the osparc platform. Run `uv run screenshot-agent/agent.py` to see how to do that.
 
 ## How Screenshot Instructions Work
 
