@@ -48,9 +48,12 @@ browser, and all required libraries.
 
 ### 3. Run the agent
 
+> Note: The agent will need access to an account (username and passwd). It is important that the 2FA is disabled for that account. Ideally you use a designated account for the agent which has minimally required priviliges and access to no credits.
+
 ```bash
-bash screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click
+bash screenshot-agent/sandboxed-agent.bash <url>
 ```
+with a url pointing to the deployment you are targeting (e.g. https://s4l-master-zmt.click or https://sim4life.io). 
 
 The agent will:
 
@@ -67,8 +70,9 @@ and which (if any) failed.
 To update only a specific screenshot, use `--asset` with part of the file name:
 
 ```bash
-bash screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --asset help_from_dashboard
+bash screenshot-agent/sandboxed-agent.bash <url> --asset help_from_dashboard
 ```
+For further agent options, run `bash screenshot-agent/sandboxed-agent.bash --help`
 
 ## Non headless mode
 
