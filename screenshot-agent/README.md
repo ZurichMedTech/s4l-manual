@@ -81,7 +81,7 @@ For further agent options, run `bash screenshot-agent/sandboxed-agent.bash --hel
 By default the agent runs in a "headless" mode. I.e. the browser window never opens on the users desktop. This is a requirement when running the agent inside the sandbox container. However, for debugging purposes it can be useful to run the agent in a non-headless mode to see how the agent is actually navigating the osparc platform.
 Run `uv run screenshot-agent/agent.py` to see how to do that (you will need to have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed)
 
-## How Screenshot Instructions Work
+## Configure the agent to take a new screenshot
 
 Each screenshot the agent knows about is defined by a special HTML comment in the
 documentation Markdown files. For example in `docs/overview/shop.md`:
