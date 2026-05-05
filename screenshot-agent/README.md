@@ -11,7 +11,7 @@ fresh screenshots.
 | Requirement | Why |
 |---|---|
 | **Docker** | The agent runs inside a container so you don't have to install Python or any dependencies on your machine. |
-| **An OpenAI API key** | The agent uses GPT-4.1-mini to decide how to navigate the UI. |
+| **An OpenAI API key** | The agent uses GPT-4.1-mini to decide how to navigate the UI. Ask OPS how to get an API token associated with a paid account |
 
 ## Installing Docker
 
