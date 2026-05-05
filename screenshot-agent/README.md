@@ -70,9 +70,12 @@ To update only a specific screenshot, use `--asset` with part of the file name:
 bash screenshot-agent/sandboxed-agent.bash https://s4l-master-zmt.click --asset help_from_dashboard
 ```
 
-### Non headless mode
+## Non headless mode
 
-By default the agent runs in a "headless" mode. I.e. the browser window never opens on the users desktop. This is a requirement when running the agent inside the sandbox container. However, for debugging purposes it can be useful to run the agent in a non-headless mode to see how the agent is actually navigating the osparc platform. Run `uv run screenshot-agent/agent.py` to see how to do that.
+> WARNING: Running the agent outside its "sandbox" will give it acces to your **entire** filesystem. That can be dangerous!
+
+By default the agent runs in a "headless" mode. I.e. the browser window never opens on the users desktop. This is a requirement when running the agent inside the sandbox container. However, for debugging purposes it can be useful to run the agent in a non-headless mode to see how the agent is actually navigating the osparc platform.
+Run `uv run screenshot-agent/agent.py` to see how to do that (you will need to have [uv](https://docs.astral.sh/uv/getting-started/installation/) installed)
 
 ## How Screenshot Instructions Work
 
