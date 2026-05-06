@@ -8,4 +8,7 @@ cd "${REPO_ROOT}"
 IMAGE_NAME="s4l-agent"
 
 # build the image
-docker build -t "$IMAGE_NAME" "$SCRIPT_DIR"
+docker build \
+    --build-arg UID="$(id -u)" \
+    --build-arg GID="$(id -g)" \
+    -t "$IMAGE_NAME" "$SCRIPT_DIR"

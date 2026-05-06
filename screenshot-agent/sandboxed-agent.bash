@@ -13,10 +13,8 @@ docker run --rm -it \
     --pids-limit=1000 \
     --security-opt=no-new-privileges \
     --cap-drop=ALL \
-    --user="$(id -u):$(id -g)" \
     -v "$REPO_ROOT:/app" \
-    -v "$CACHE_VOLUME:/uv-cache" \
-    --tmpfs /.config \
+    -v "$CACHE_VOLUME:/home/agent/.cache/uv" \
     -e "OPENAI_API_KEY=${OPENAI_API_KEY:-}" \
     "$IMAGE_NAME" \
     "run" \
