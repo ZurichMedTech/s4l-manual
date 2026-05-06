@@ -42,11 +42,11 @@ Sharing a Project instance with other users allows collaboration on the same pip
 <!-- screenshot-instructions: assets/workflow/share.png
 1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
 2. Wait a moment for all projects to display.
-3. Click one of the projects in order to display the `Project Window`.
+3. Find a project which is **not** called `screenshot-agent-project`. Click on that project in order to display the `Project Window`.
 4. In the `Project Window` click the `Sharing` button. If the `Sharing` button is deactivated (greyed out), close the `Project Window` by clicking the `x` in the top right corner and go back to step 3 to select a different project.
-5. In the content which appears, click the `Share` button.
-6. Use **save_screenshot** with `path="assets/workflow/share.png"` and
-    selecting the `Project Window`.
+5. In the content which appears, click the `Share` button to open the "Recipient window".
+6. The Recipient window as a `Search` field. In that search field, type "Z43".
+7. Use **save_screenshot** with `path="assets/workflow/share.png"` and selecting the `Project Window`.
 -->
 <p align="center">
   <img width="90%" src="assets/workflow/share.png">
