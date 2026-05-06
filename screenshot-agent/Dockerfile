@@ -2,6 +2,7 @@ FROM ghcr.io/astral-sh/uv:debian
 
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 ENV UV_CACHE_DIR=/uv-cache
+RUN mkdir -p /uv-cache && chmod 777 /uv-cache
 RUN uvx browser-use install \
     && chmod -R o+rX "${PLAYWRIGHT_BROWSERS_PATH}"
 
