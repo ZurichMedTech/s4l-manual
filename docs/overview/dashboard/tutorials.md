@@ -2,6 +2,12 @@
 
 A set of several tutorials available in the ```TUTORIALS``` tab of the ```Dashboard``` will help you to get familiar with **Sim4Life**.
 
+<!-- screenshot-instructions: assets/dashboard/tutorials.png
+1. On the dashboard page, find the `Tutorials` tab at the top of the page. Click the Tutorials tab to display the available tutorials.
+2. Wait a moment for all tutorials to appear.
+3. Use **save_screenshot** with `path="assets/dashboard/tutorials.png"` and
+    selecting the entire window.
+-->
 <p align="center">
   <img width="90%" src="assets/dashboard/tutorials.png">
 </p>

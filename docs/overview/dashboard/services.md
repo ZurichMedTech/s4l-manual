@@ -4,7 +4,13 @@ Every Project is composed of one or more ```Apps```. Apps are building blocks fo
 
 All these apps can be already provided within a project or can be set up from scratch by the user by selecting options in the App catalog.
 
-
+<!-- screenshot-instructions: assets/dashboard/serviceworkbench.png
+1. On the dashboard page, find the `+ New` button in the top left corner of the screen. Click the button.
+2. In the window which appears, click the `Pipeline` subitem.
+3. Wait for Pipeline to be created. If the `Project Options` pop-up appears, give your project the title "screenshot-agent-project". Then click the `New` button.
+4. Now that the pipeline has been created, right click on the Desktop Window and click on the appearing "+" button.
+5. Use **save_screenshot** with `path="assets/dashboard/serviceworkbench.png"` and selecting only the `Service Catalog` window.
+-->
 <p align="center">
   <img width="80%" src="assets/dashboard/serviceworkbench.png">
 </p>

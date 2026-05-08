@@ -12,6 +12,13 @@ Once your data are uploaded, you can connect them to the appropriate services in
 
    To re-activate this feature, simply un-check the *Connect ports automatically* box.
 
+<!-- screenshot-instructions: assets/workflow/autoconnect.png
+1. On the dashboard page, find the Profile button on the top right corner of the page. Click the Profile button.
+2. In the menu which pops open, click the `My Account` button to open the `User Menu` window.
+3. Inside the `User Menu` window, click the `Confirmations` tab on the left side of the window.
+4. Use **save_screenshot** with `path="assets/workflow/autoconnect.png"` and
+    selecting the `User Menu` window.
+-->
 <p align="center">
   <img width="80%" src="assets/workflow/autoconnect.png">
 </p>
