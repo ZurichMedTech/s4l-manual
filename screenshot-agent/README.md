@@ -6,7 +6,7 @@ browser, logs in to a Sim4Life deployment, navigates to the right pages, and sav
 fresh screenshots.
 
 ## Prerequisites
-> Note: If you are working on windows, you must use this tool via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). It is not expected to work on Windows natively.
+> Note: If you are working on windows, you must use this tool via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). It is not expected to work on Windows natively. If you work on Windows I highly encourage you to work in WSL via the VS code WSL [extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). This will allow you to easily review the screenshots captured by the agent before commiting them.
 
 | Requirement | Why |
 |---|---|
