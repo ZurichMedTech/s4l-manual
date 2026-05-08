@@ -1,5 +1,15 @@
 ## Creating a New Project
 
+<!-- screenshot-instructions: assets/dashboard/new_project.png
+1. On the dashboard page, find the `Projects` tab at the top center of the page and click it.
+2. Wait a moment for all images to load.
+3. Use **save_screenshot** with `path="assets/dashboard/new_project.png"` and
+   selecting the entire screen.
+-->
+<p align="center">
+  <img width="100%" src="assets/dashboard/new_project.png">
+</p>
+
 **Project from Scratch**
   - You may choose to create a project from scratch or based on an existing project. To create an empty project with no services inside, navigate to the *Project* tab of the *Dashboard*, click on the <code> + New </code> button, and select Sim4Life, which will start the user interface of the Sim4Life service.
 

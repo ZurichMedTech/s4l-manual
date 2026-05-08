@@ -1,5 +1,12 @@
 ## The Shop
 
+<!-- screenshot-instructions: assets/shop.png
+1. On the dashboard page, click the `Profile` button in the top right corner of the page.
+2. In the menu which opens, click `The Shop` button.
+3. Wait a moment for the shop window to appear.
+4. Use **save_screenshot** with `path="assets/shop.png"` and
+    selecting the show window.
+-->
 <p align="center">
   <img width="90%" src="assets/shop.png">
 </p>
