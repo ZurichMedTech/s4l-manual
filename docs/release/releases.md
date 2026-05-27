@@ -2,6 +2,130 @@
 
 ## Sim4Life Service
 
+### Version: 9.4.2
+- Release Date: 09.04.2026
+- Selected New Features/Improvements
+    - In-App Release Notes
+        - New version popups are now more informative.
+        - When a new platform version is released, the “New Version Released” dialog now displays the full release notes directly in the app, so you can review changes without opening an external link.
+    - More Resilient Service State Tracking
+        - No more services stuck in “Pending”.
+        - Interactive services no longer get stuck showing a "pending" state when a WebSocket notification is lost. A periodic REST polling fallback has been added so the frontend will always catch up with the actual service state, even if the real-time channel drops a message.
+    - Fixes & Stability Improvements
+        - Fixed a race condition affecting file picker progress updates (RTC).
+        - Fixed an issue where active dashboard filters were not displayed correctly.
+        - Prevented users from duplicating projects that are currently open
+
+### Version: 9.4
+- Release Date: 05.03.2026
+- Selected New Features/Improvements
+    - The new thermal unstructured stationary solver enables the calculation of steady-state temperature distribution in complex geometries using an unstructured mesh. It determines the temperature field once thermal equilibrium is reached. This approach is particularly useful for irregular shapes where flexible meshing improves accuracy and where only the final stabilized thermal condition is required. It also supports multiport configurations, similar to the rectilinear solver, allowing multiple thermal inputs to be defined within the same simulation.
+    - The T-increase Thermal Transient Simulation option enabled also for thermal unstructured solver.
+    - The option to directly link the multiport low-frequency solver to the neuron solver enables users to assign the weight factor for each port directly in the neuron solver’s source settings.
+    - Users can now disable the current conversation check with the checkbox within sources in the Magneto-Static Vector-Potential solver when current loops are closed using PEC instead of line element loops.nd easier installation.
+    - Stability, performance, and quality assurance: Improved robustness under demanding workloads, smoother handling of large models, clearer feedback during long-running operations, and a faster patch delivery cycle help ensure that complex projects remain stable and reproducible.
+    - Integrated AI assistant: Directly accessible from the search bar, the AI assistant answers questions about tools, workflows, solvers, and APIs, — helping users navigate modeling tasks, understand concepts, and locate relevant functionality more efficiently.
+    - A cleaner, more consistent user interface: Streamlined tool organization reduces visual clutter and improves focus during multi-step simulation workflows.
+    - Stronger scripting and documentation coherence: Improved alignment between GUI and Python workflows, a clearer API structure, and more accessible documentation support the kind of large-scale, script-driven studies illustrated above.
+    - Rebuilt Manual and Python API reference to provide better navigation, improved browsing, and enhanced search functionality.
+    - Easier tag management through an improved user interface, making it faster to organize projects without interrupting your workflow.
+
+### Version: 9.3
+- Release Date: 13.01.2026
+- Selected New Features/Improvements
+    - New color palette and design
+    - Update symbol server python libraries
+    - Replace Typesense with Meilisearch in search service
+    - Cleanup snap features in neuron tools
+    - Rename "Place Electrodes" to "Place Templates", add option to specify an offset
+    - Extend Move tool: add modifier to allow "Move From To" to align moved entity with the normal at the target surface
+    - Allow specifying image spacing during model import for png, tiff and bmp files
+    - Add option for periodic pulse shapes in neuron simluations
+    - Keep chat history in AI Chatbot
+    - Adds Hornet plugin
+    - Add tool (and Python API) to sample points on triangle mesh surfaces (and patches)
+    - Add option to place local coordinate system "anchors" at sample points, to simplify placing template models at these positions
+    - Add modeling tool to create patch at the interface between a selection of triangle mesh entities
+    - Add tool to convert (interpret) an image as a labelfield
+    - Add context menu tool to load tissue list for labelfield
+- Fixed
+    - Fix hanging iSolve when subgridding setup is wrong
+    - Fix issue with ImageFaceting that breaks loading certain documents
+    - Fix for Delete Triangle Patch to preserve preexisting patches
+    - Fix for simulations with virtual thin layers being unable to run
+
+### Version: 9.2
+- Release Date: 07.10.2025
+- Selected New Features/Improvements
+    - Modeling Intelligence
+        - Upgraded Optimizer integrates advanced surrogate modeling with a multi-objective genetic algorithm (MOGA) for powerful and efficient design optimization.
+        - Transforming complex parameter sweeps into interactive, visual analyses for faster and deeper insight.
+        - Pareto Front Visualization clearly displays trade-offs between competing objectives such as safety, efficacy, and energy efficiency.
+        - Proven Impact: In a spinal cord stimulation study, discovered pulse shapes delivering the same neural recruitment with up to 5× lower energy consumption.
+    - Third-generation Advanced Anatomical Modeling and AI-Powered Tools
+        - Third-generation deep learning model auto-labels head, neck, and torso tissues from MRI/CT scans.
+        - Generating solver-ready models directly from raw images, reducing setup time and user interaction by about 50% compared to previous versions.
+    - OpenFOAM Plugin
+        - The user can run OpenFOAM solvers directly from Sim4Life’s Plugin Manager — no command-line required.
+        - Simple Workflow: Import meshed anatomy, choose a fluid or small-strain-mechanics solver, set boundary conditions, and click “Run.”
+        - All dictionaries, solver logs, and post-processing outputs are stored within the Sim4Life project for full reproducibility.
+    - Broadband Skin Power Absorption Model
+        - New Broadband Skin Model implements the latest Christ et al. (2025) model, now adopted by IEC/IEEE standards.
+        - Enabling absorbed power density determination for regulatory compliance and device safety evaluation across 10 and 110 GHz.
+        - Applicable across all use cases and human models within Sim4Life.web V9.2.
+    - Deep Brain Stimulation (DBS)/Stereoelectroencephalography (sEEG) Electrode Generator
+        - New tool rapidly creates parameterized DBS and sEEG electrode models for neurostimulation applications.
+        - The user can customize diameter, contact length, spacing, arc angle, segmentation, and tip offset interactively or via Python API.
+        - Enabling seamless, scriptable design and simulation of personalized neurostimulation implants.
+    - Help Center
+        - Integrated Help Center connects directly with Application Support from within Sim4Life.web V9.2.
+        - Faster Troubleshooting by easily sharing logs and screenshots (opt-in).
+        - Simplifying support requests, improves feedback loops and helps new users get started faster.
+
+### Version: 9.1
+- Release Date: 09.10.2025
+- Selected New Features/Improvements
+    - Add Filter to Task Manager
+    - Add a Table for visualizing tabular data in forms
+    - Ignore capitalization of file endings in file dialog filters (*.step vs *.STEP)
+    - Default to disabling Accurate Transparency to avoid hanging rendering
+- Fixed
+    - Fix bug in selection order of modeling tree
+    - Fix bug with visibility of 2D plots
+    - Fix crash when importing multiple modeling files at once
+    - Fix bug when Application goes into Unresponsive State and never recovers (at startup and when rendering)
+    - Fixes invitations links produced by PO center
+
+### Version: 9.0.1
+- Release Date: 14.08.2025
+- Selected New Features/Improvements
+    - Activity Overview Improvements
+        - The Activity Overview backend has been redesigned for better performance and accuracy.
+        - Multiport simulations from Sim4Life now appear as a single run for easier tracking.
+    - Metamodeling
+        - Metamodeling now includes Functions support.
+        - Default inputs are now editable when creating new functions.
+        - Functions Browser allows the user to list available functions, edit the title and description and view function details.
+    - Conversations Upgraded
+        - Project Conversations are now more powerful and collaborative.
+        - Multiple conversations per project to separate topics. 
+        - Edit and Delete messages.
+        - Real-time updates between multiple users — chat is instantaneous.
+        - Notify specific users.
+        - Pinned conversations in pipeline for location-specific discussions.
+    - Extended Project Search
+        - The Projects tab search widget now supports searching across My Projects, Templates and Public Projects.
+- No longer broken
+    - Concurrent download of multiport results would yield to corrupt files
+    - Fix bug related to rate limits in plugins discover that would break the full sim4life as well
+    - Hide noisy JSON MONITORING in logs
+    - Fix issue in synchronization of job states file
+    - Fix the wrong handling of faulty job creation
+    - Fix removal of empty task groups in Task Manager
+    - Fix Index behaviour for popup windows
+    - Fix issue with stopping deleting jobs in local isolve
+
+
 ### Version: 9.0
  - Release Date: 26.06.2025
  - [Sim4Life](https://sim4life.swiss/) V9.0 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This release includes new tools for optimization, artificial intelligence (AI-) driven modeling, solver plugin support and pipelining to facilitate powerful, automated workflows throughout the entire modeling chain. Sim4Life V9.0 – available for both web and desktop – delivers more power, flexibility, and integration to your simulation workflows.
@@ -144,6 +268,53 @@
 
 
 ## sim4life.web Platform
+
+<h3 id="v1.92.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.92.0.md">Version: 1.92.0</a></h3>
+ 
+ - Release Date: 19.05.2026
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.92.0.md) 
+
+<h3 id="v1.91.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.91.0.md">Version: 1.91.0</a></h3>
+ 
+ - Release Date: 09.04.2026
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.91.0.md) 
+
+<h3 id="v1.90.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.90.0.md">Version: 1.90.0</a></h3>
+ 
+ - Release Date: 05.03.2026
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.90.0.md) 
+
+  <h3 id="v1.89.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.89.0.md">Version: 1.89.0</a></h3>
+ 
+ - Release Date: 12.02.2026
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.89.0.md) 
+
+ <h3 id="v1.88.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.88.0.md">Version: 1.88.0</a></h3>
+ 
+ - Release Date: 13.01.2026
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.88.0.md) 
+
+<h3 id="v1.87.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.87.0.md">Version: 1.87.0</a></h3>
+ 
+ - Release Date: 04.11.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.87.0.md) 
+
+
+<h3 id="v1.86.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.86.0.md">Version: 1.86.0</a></h3>
+ 
+ - Release Date: 07.10.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.86.0.md) 
+
+<h3 id="v1.85.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.85.0.md">Version: 1.85.0</a></h3>
+ 
+ - Release Date: 09.09.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.85.0.md) 
+
+
+<h3 id="v1.84.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.84.0.md">Version: 1.84.0</a></h3>
+ 
+ - Release Date: 14.08.2025
+ - [Changelog](https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.84.0.md) 
 
 <h3 id="v1.83.0"><a href="https://github.com/ITISFoundation/osparc-issues/blob/master/release-notes/s4l/v1.83.0.md">Version: 1.83.0</a></h3>
  
