@@ -2,6 +2,16 @@
 
 ## Sim4Life Service
 
+### Version: 9.4.3
+- Release Date: 27.04.2026
+- Selected New Features/Improvements
+    - Added AxWare support for Blackwell architecture. 
+    - Added drag/drop support for Mask Filter.
+- Fixed
+    - Fixed a bug when selecting file paths.
+    - Fix an issue where jobs cannot be submitted because the controller could not be found.
+
+
 ### Version: 9.4.2
 - Release Date: 09.04.2026
 - Selected New Features/Improvements
@@ -129,7 +139,6 @@
 ### Version: 9.0
  - Release Date: 26.06.2025
  - [Sim4Life](https://sim4life.swiss/) V9.0 is the latest version of our online simulation platform for computational life science research, device design, and optimization, as well as safety and electromagnetic compliance evaluations. This release includes new tools for optimization, artificial intelligence (AI-) driven modeling, solver plugin support and pipelining to facilitate powerful, automated workflows throughout the entire modeling chain. Sim4Life V9.0 – available for both web and desktop – delivers more power, flexibility, and integration to your simulation workflows.
-
  - Selected new features
     - Unified Ecosystem
         - Fully integrated with the o²S²PARC platform, providing access to all functionalities of o²S²PARC.
