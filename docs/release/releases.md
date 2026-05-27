@@ -9,7 +9,7 @@
     - Added drag/drop support for Mask Filter.
 - Fixed
     - Fixed a bug when selecting file paths.
-    - Fix an issue where jobs cannot be submitted because the controller could not be found.
+    - Fixed an issue where jobs cannot be submitted because the controller could not be found.
 
 
 ### Version: 9.4.2
