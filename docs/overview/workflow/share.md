@@ -73,15 +73,15 @@ There are three types of roles for projects :
     * Can share the project with other members
     * Can delete the project
 
-### Publishing a Project as a Tutorial
-Publishing a Project as a Tutorial will save the state of the Project at the current moment and it will appear in the ```Public Projects``` tab of the Dashboard. Any changes made to the original Project after publishing as a Tutorial will not change the Tutorial. Other user's will create their own copy automatically when opening the project.
+### Publishing a Project
+Publishing a Project will save the state of the Project at the current moment and it will appear in the ```Public Projects``` tab of the Dashboard. Any changes made to the original Project after publishing it will not change it. Other user's will create their own copy automatically when opening the project.
 
-To publish your Project as a Tutorial:
+To publish your Project:
 1. Click on the Project card.
 2. Switch to the *Publish* tab in the left panel as shown in the figure below.
-3. You may choose to publish the Tutorial with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
+3. You may choose to publish the project with the data inside (for example, if you have any files saved in a JupyterLab inside the Project). To publish with data, make sure the "Publish with data" field is checked. 
 4. Click the ```Publish``` button at the top right hand corner.
-5. The Tutorial will now appear in ```Public Projects```.
+5. The project will now appear in ```Public Projects```.
 
 <!-- screenshot-instructions: assets/workflow/publishtutorials.png
 1. On the dashboard page, click the `PROJECTS` tab at the top of the page.
